@@ -33,20 +33,20 @@ const textTestimonials = [
 
 const videoTestimonials = [
   {
-    name: 'Ananya Gupta',
-    role: 'Student',
-    age: '17',
-    title: 'Hip Hop Journey',
-    description: 'My incredible journey learning hip hop dance',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    name: 'Karan Gaikwad',
+    role: 'choreography by K-Unit-Dance-School',
+    age: 'Age group 10-18',
+    title: 'DANCE COVER VIDEO by K-UNIT-DANCE-SCHOOL',
+    description: 'SHRI KRISHNNA | DANCE COVER VIDEO | K UNIT DANCE SCHOOL .',
+    videoUrl: 'https://www.youtube.com/embed/5-QwyCSDkWM'
   },
   {
-    name: 'Arjun Verma',
-    role: 'Student',
-    age: '19',
-    title: 'Contemporary Dance Experience',
-    description: 'How contemporary dance changed my life',
-    videoUrl: 'https://www.youtube.com/embed/9bZkp7q19f0'
+    name: 'Karan Gaikwad',
+    role: 'choreography by K-Unit-Dance-School',
+    age: 'Age group 18-25',
+    title: 'TAMMA the (fearless brother) new action short film / by Karan Gaikwad',
+    description: 'Choreography by K-Unit-Dance-School',
+    videoUrl: 'https://www.youtube.com/embed/ichiKk0he4U'
   }
 ]
 
@@ -55,55 +55,55 @@ const youtubeTestimonials = [
     name: 'Dance Studio Reviews',
     title: 'K Unit Dance School - Best Dance Studio in City',
     channel: 'Local Reviews Channel',
-    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    thumbnail: '📹'
+    link: 'https://www.youtube.com/watch?v=1sAcyoVxQEk',
+    thumbnail: '🎬'
   },
   {
     name: 'Performance Highlights',
     title: 'K Unit Dance School Annual Recital 2024',
     channel: 'K Unit Official',
-    link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+    link: 'https://www.youtube.com/watch?v=RGriGxFf_6o',
     thumbnail: '🎬'
   },
   {
     name: 'Workshops & Classes',
     title: 'Summer Dance Workshop - Behind the Scenes',
     channel: 'K Unit Dance School',
-    link: 'https://www.youtube.com/watch?v=2_HXUhShhmk',
-    thumbnail: '🎥'
+    link: 'https://www.youtube.com/watch?v=xix8_KFzrxE&pp=0gcJCT4LAYcqIYzv',
+    thumbnail: '🎬'
   }
 ]
 
 const instagramTestimonials = [
   {
-    name: '@dance_student_2024',
-    title: 'Amazing transformation in 6 months!',
-    handle: 'dance_student_2024',
-    link: 'https://www.instagram.com/dance_student_2024',
-    likes: '342',
+    name: '@k_unit_dance_school__official',
+    title: 'Amazing dance!',
+    handle: '@k_unit_dance_school__official',
+    link: 'https://www.instagram.com/k_unit_dance_school__official/reel/DZsVFKGMgm3/',
+    likes: '7k+',
     emoji: '💃'
   },
   {
     name: '@hip_hop_vibes_',
     title: 'Living my best dance life at K Unit 🔥',
     handle: 'hip_hop_vibes_',
-    link: 'https://www.instagram.com/hip_hop_vibes_',
-    likes: '428',
+    link: 'https://www.instagram.com/p/DYtWP1fK0J7/',
+    likes: '',
     emoji: '🕺'
   },
   {
     name: '@bollywood_dancer_official',
     title: 'Grateful for amazing instructors and friends ✨',
     handle: 'bollywood_dancer_official',
-    link: 'https://www.instagram.com/bollywood_dancer_official',
-    likes: '521',
+    link: 'https://www.instagram.com/p/DPwJREKCqVG/',
+    likes: '',
     emoji: '💫'
   },
   {
     name: '@contemporary_soul',
     title: 'Dance is my therapy, K Unit is my home 🏠',
     handle: 'contemporary_soul',
-    link: 'https://www.instagram.com/contemporary_soul',
+    link: 'https://www.instagram.com/p/DO8Qj3zjC2r/',
     likes: '387',
     emoji: '🎭'
   }

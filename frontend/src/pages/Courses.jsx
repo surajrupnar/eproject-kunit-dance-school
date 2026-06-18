@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import foundationCourseImage from '../assets/cards/foundation-course.png'
+import technicalCourseImage from '../assets/cards/Intermediate-course.png'
+import advancedCourseImage from '../assets/cards/advanced-course.png'
 
 const CourseIllustration = ({ type }) => {
   const illustrations = {
@@ -70,6 +73,63 @@ const CourseIllustration = ({ type }) => {
     )
   }
   return illustrations[type] || illustrations['default']
+}
+
+const DiplomaIllustration = ({ title }) => {
+  const illustrations = {
+    'Foundation Course': (
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
+        <defs>
+          <linearGradient id="foundation" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor: '#ff6f61', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#ffb347', stopOpacity: 0.05}} />
+          </linearGradient>
+        </defs>
+        <rect width="160" height="160" fill="url(#foundation)" rx="8"/>
+        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#ff6f61">🎧</text>
+        <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.75)">HIP HOP</text>
+      </svg>
+    ),
+    'Technical Diploma': (
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
+        <defs>
+          <linearGradient id="technical" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor: '#3a86ff', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#8338ec', stopOpacity: 0.05}} />
+          </linearGradient>
+        </defs>
+        <rect width="160" height="160" fill="url(#technical)" rx="8"/>
+        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#3a86ff">🧠</text>
+        <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.75)">TECHNIQUE</text>
+      </svg>
+    ),
+    'Instructor Diploma': (
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
+        <defs>
+          <linearGradient id="instructor" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor: '#ff006e', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#8338ec', stopOpacity: 0.05}} />
+          </linearGradient>
+        </defs>
+        <rect width="160" height="160" fill="url(#instructor)" rx="8"/>
+        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#8338ec">📚</text>
+        <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.75)">TEACHING</text>
+      </svg>
+    ),
+    'default': (
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
+        <defs>
+          <linearGradient id="diplomaDefault" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 0.15}} />
+            <stop offset="100%" style={{stopColor: '#ffffff', stopOpacity: 0.05}} />
+          </linearGradient>
+        </defs>
+        <rect width="160" height="160" fill="url(#diplomaDefault)" rx="8"/>
+        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ffffff">✨</text>
+      </svg>
+    )
+  }
+  return illustrations[title] || illustrations['default']
 }
 
 export default function Courses(){
@@ -144,6 +204,61 @@ export default function Courses(){
             </button>
           </div>
         ))}
+      </div>
+
+      {/* Diploma Certification Course section */}
+      <div style={{marginTop: '4rem', textAlign: 'center'}}>
+        <h2 className="text-gradient" style={{fontSize: 'clamp(2rem, 3vw, 2.75rem)', fontWeight: 900, marginBottom: '1.5rem'}}>Diploma Certification Course</h2>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem'}}>
+          {[
+            {
+              title: 'Foundation Course',
+              description: 'In this foundational course, you’ll dive into the vibrant world of Hip-Hop culture and dance. We’ll cover the basics, from the history of Hip-Hop to understanding its cultural significance. Get ready to groove as you learn fundamental dance moves and techniques. And don’t forget the theory exam—it’s not just about the moves, but also about understanding the roots of this dynamic dance form.',
+              icon: '🎓',
+              image: foundationCourseImage
+            },
+            {
+              title: 'Intermediate Course',
+              description: 'Now it’s time to take your Hip-Hop journey to the next level. In Level 2, we’ll explore the diverse styles within Hip-Hop, including breaking, locking, popping, and the energetic house culture. Get ready to break it down, lock it up, pop and flow as you master the distinct elements of each style. This level is all about expanding your repertoire and becoming a well-rounded Hip-Hop dancer.',
+              icon: '🎓',
+              image: technicalCourseImage
+            },
+            {
+              title: 'Advanced Course',
+              description: 'This level delves into the finer aspects of dance, focusing on creativity, choreography, and self-expression. Develop your skills in body control, enhance your mindset, and explore the depths of musicality. This level challenges you with tasks that push your boundaries, fostering innovation and individuality in your dance. By the end, you’ll not only be a skilled dancer but a true artist in the world of Hip-Hop.',
+              icon: '🎓',
+              image: advancedCourseImage
+            }
+          ].map((item, idx) => (
+            <div key={idx} className="card" style={{padding: '2rem', minHeight: '320px', display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'space-between', background: 'rgba(255,255,255,0.04)'}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+                <div style={{fontSize: '2rem'}}>{item.icon}</div>
+                <h3 style={{fontSize: '1.25rem', fontWeight: 700, margin: 0, color: '#fff'}}>{item.title}</h3>
+              </div>
+              {item.image && (
+                <div style={{height: '180px', borderRadius: '0.75rem', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))', border: '1px solid rgba(255,255,255,0.08)'}}>
+                  <img src={item.image} alt={`${item.title} illustration`} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                </div>
+              )}
+              <p style={{color: 'rgba(255,255,255,0.75)', margin: 0, lineHeight: 1.75}}>{item.description}</p>
+              <span style={{fontSize: '0.875rem', color: 'var(--color-text-muted)'}}>Certified curriculum with completion badge</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Brochure download section */}
+      <div style={{marginTop: '3rem', padding: '2.5rem 2rem', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '1rem', border: '1px solid rgba(255, 255, 255, 0.08)', textAlign: 'center'}}>
+        <p style={{margin: '0 0 0.75rem', color: 'var(--color-text-muted)', fontSize: '0.95rem'}}>Want a printable overview of our complete program, schedules, and pricing?</p>
+        <h3 style={{margin: 0, fontSize: 'clamp(1.5rem, 2.2vw, 2rem)', fontWeight: 800, color: '#ffffff'}}>Download the K-Unit Dance School Brochure</h3>
+        <p style={{margin: '1rem auto 0', maxWidth: '720px', color: 'rgba(255,255,255,0.75)'}}>Get the full course roadmap, certification details, and enrollment benefits in one polished PDF.</p>
+        <a
+          href="/brochure/K-Unit Dance School Brochure.pdf"
+          download
+          style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginTop: '1.5rem', padding: '0.95rem 1.75rem', borderRadius: '999px', background: 'linear-gradient(135deg, #ff006e, #8338ec)', color: '#fff', fontWeight: 700, textDecoration: 'none', boxShadow: '0 18px 50px rgba(255, 0, 110, 0.18)'}}
+        >
+          Download Brochure
+        </a>
       </div>
 
       {/* Call to action */}

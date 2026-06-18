@@ -78,7 +78,14 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>📍</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Location</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>K Unit Dance School Studio, Block No. 47,Nandhi Bazar, near water tank, Koyna Colony, Gandhinagar, Maharashtra 416119</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=K+Unit+Dance+School+Studio%2C+Block+No.+47%2C+Nandhi+Bazar%2C+near+water+tank%2C+Koyna+Colony%2C+Gandhinagar%2C+Maharashtra+416119"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{fontSize: '0.95rem', color: 'var(--color-text-muted)', textDecoration: 'none', display: 'block', lineHeight: 1.7}}
+              >
+                K Unit Dance School Studio, Block No. 47, Nandhi Bazar, near water tank, Koyna Colony, Gandhinagar, Maharashtra 416119
+              </a>
             </div>
             
             <div className="card" style={{padding: '1.5rem'}}>
@@ -90,8 +97,17 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>📧</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Email</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>info@kunitdance.com</p>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@kunitdance.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)', textDecoration: 'none'}}
+              >
+                info@kunitdance.com
+              </a>
             </div>
+
+
 
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>🕒</div>
