@@ -6,6 +6,8 @@ import Features from './pages/Features'
 import Testimonials from './pages/Testimonials'
 import Contact from './pages/Contact'
 import AdminPanel from './pages/AdminPanel'
+import Portfolio from './pages/Portfolio'
+import Profile from './pages/Profile'
 import Announcements from './components/Announcements'
 import BroadcastBanner from './components/BroadcastBanner'
 import WhatsAppWidget from './components/WhatsAppWidget'
@@ -22,6 +24,8 @@ export default function App(){
           <Link to="/courses" style={{textDecoration: 'none', color: 'var(--color-text-muted)', fontWeight: '500', transition: 'color 200ms', cursor: 'pointer'}} onMouseEnter={e => e.target.style.color = 'var(--color-accent-secondary)'} onMouseLeave={e => e.target.style.color = 'var(--color-text-muted)'}>Courses</Link>
           <Link to="/testimonials" style={{textDecoration: 'none', color: 'var(--color-text-muted)', fontWeight: '500', transition: 'color 200ms', cursor: 'pointer'}} onMouseEnter={e => e.target.style.color = 'var(--color-accent-tertiary)'} onMouseLeave={e => e.target.style.color = 'var(--color-text-muted)'}>Testimonials</Link>
           <Link to="/contact" style={{textDecoration: 'none', color: 'var(--color-text-muted)', fontWeight: '500', transition: 'color 200ms', cursor: 'pointer'}} onMouseEnter={e => e.target.style.color = 'var(--color-accent)'} onMouseLeave={e => e.target.style.color = 'var(--color-text-muted)'}>Contact</Link>
+          <Link to="/portfolio" style={{textDecoration: 'none', color: 'var(--color-text-muted)', fontWeight: '500', transition: 'color 200ms', cursor: 'pointer'}} onMouseEnter={e => e.target.style.color = 'var(--color-accent-secondary)'} onMouseLeave={e => e.target.style.color = 'var(--color-text-muted)'}>Portfolio</Link>
+          <Link to="/profile" style={{textDecoration: 'none', color: 'var(--color-text-muted)', fontWeight: '500', transition: 'color 200ms', cursor: 'pointer'}} onMouseEnter={e => e.target.style.color = 'var(--color-accent)'} onMouseLeave={e => e.target.style.color = 'var(--color-text-muted)'}>Profile</Link>
         </div>
       </nav>
 
@@ -36,6 +40,8 @@ export default function App(){
           <Route path="/courses" element={<Courses/>} />
           <Route path="/testimonials" element={<Testimonials/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/admin" element={<AdminPanel/>} />
         </Routes>
       </main>
