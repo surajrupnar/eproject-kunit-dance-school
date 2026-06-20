@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import foundationCourseImage from '../assets/cards/foundation-course.png'
-import technicalCourseImage from '../assets/cards/Intermediate-course.png'
+import technicalCourseImage from '../assets/cards/intermediate-course.png'
 import advancedCourseImage from '../assets/cards/advanced-course.png'
 
 const CourseIllustration = ({ type }) => {
