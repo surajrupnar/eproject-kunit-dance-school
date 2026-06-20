@@ -168,7 +168,7 @@ export default function Testimonials(){
       {activeTab === 'text' && (
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem'}}>
           {textTestimonials.map((t, idx) => (
-            <div key={idx} className="card dance-shadow-3" style={{
+            <div key={idx} className="card" style={{
               display: 'flex',
               flexDirection: 'column',
               borderRadius: '1rem'
@@ -239,7 +239,7 @@ export default function Testimonials(){
       {activeTab === 'video' && (
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem'}}>
           {videoTestimonials.map((v, idx) => (
-            <div key={idx} className="card dance-shadow-1" style={{
+            <div key={idx} className="card" style={{
               display: 'flex',
               flexDirection: 'column',
               borderRadius: '1rem',
@@ -327,7 +327,7 @@ export default function Testimonials(){
               rel="noopener noreferrer"
               style={{textDecoration: 'none'}}
             >
-              <div className="card dance-shadow-2" style={{
+              <div className="card" style={{
                 padding: '2rem',
                 borderRadius: '1rem',
                 cursor: 'pointer',
@@ -399,7 +399,7 @@ export default function Testimonials(){
               rel="noopener noreferrer"
               style={{textDecoration: 'none'}}
             >
-              <div className="card dance-shadow-3" style={{
+              <div className="card" style={{
                 padding: '1.5rem',
                 borderRadius: '1rem',
                 cursor: 'pointer',
