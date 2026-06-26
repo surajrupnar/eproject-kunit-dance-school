@@ -12,37 +12,29 @@ export default function Contact(){
       setStatus('validation')
       return
     }
-    // Prepare WhatsApp link using provided phone number (or fallback to business number)
-    const rawPhone = (form.phone || '').toString()
-    let digits = rawPhone.replace(/\D/g, '')
-    if (digits.length === 0) {
-      // fallback business number (country code +91)
-      digits = '919665532331'
-    } else if (digits.length === 10) {
-      // assume local 10-digit number, prefix India country code
-      digits = '91' + digits
-    }
 
-    const message = `New contact message from ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || 'N/A'}\n\nMessage:\n${form.message}`
-    const waUrl = `https://wa.me/${digits}?text=${encodeURIComponent(message)}`
+    const recipientPhone = '919665532331'
+    const message = [
+      `New contact message from ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || 'N/A'}`,
+      `Message: ${form.message}`
+    ].join('\n')
+    const waUrl = `https://wa.me/${recipientPhone}?text=${encodeURIComponent(message)}`
 
-    // Open WhatsApp in new tab for the user to send
     try {
-      window.open(waUrl, '_blank')
+      window.open(waUrl, '_blank', 'noopener,noreferrer')
     } catch (err) {
       console.warn('Could not open WhatsApp URL', err)
     }
 
-    // Still post to API (if available) for records
+    setStatus('sent')
+    setForm({name:'',email:'',phone:'',message:''})
+    setTimeout(() => setStatus(null), 5000)
+
     axios.post('/api/inquiries', form)
-      .then(()=> {
-        setStatus('sent')
-        setForm({name:'',email:'',phone:'',message:''})
-        setTimeout(() => setStatus(null), 5000)
-      })
-      .catch(()=> {
-        setStatus('error')
-        setTimeout(() => setStatus(null), 5000)
+      .catch((err) => {
+        console.warn('Could not submit inquiry to API', err)
       })
   }
 

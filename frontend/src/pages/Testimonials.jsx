@@ -47,6 +47,14 @@ const videoTestimonials = [
     title: 'TAMMA the (fearless brother) new action short film / by Karan Gaikwad',
     description: 'Choreography by K-Unit-Dance-School',
     videoUrl: 'https://www.youtube.com/embed/ichiKk0he4U'
+  },
+  {
+    name: 'K Unit Dance School',
+    role: 'Performance highlights',
+    age: 'All ages',
+    title: 'K Unit Dance School - Best Dance Studio in City',
+    description: 'A glimpse of our energetic performances and studio spirit.',
+    videoUrl: 'https://www.youtube.com/embed/1sAcyoVxQEk'
   }
 ]
 
@@ -151,6 +159,7 @@ export default function Testimonials(){
         {[
           { id: 'text', label: '💬 Text Testimonials', icon: '📝' },
           { id: 'video', label: '🎬 Video Testimonials', icon: '🎥' },
+           { id: 'spotlights', label: '🎬 KDS-spotlights', icon: '🎥' },
           { id: 'youtube', label: '▶️ YouTube Links', icon: '📹' },
           { id: 'instagram', label: '📸 Instagram', icon: '📷' }
         ].map(tab => (
@@ -313,6 +322,35 @@ export default function Testimonials(){
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* KDS Spotlights */}
+      {activeTab === 'spotlights' && (
+        <div style={{marginBottom: '3rem'}}>
+          <div style={{marginBottom: '1.5rem', textAlign: 'center'}}>
+            <h2 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.5rem'}}>KDS Spotlights</h2>
+            <p style={{color: 'var(--color-text-muted)', fontSize: '1rem'}}>A curated set of our standout dance videos and performance highlights.</p>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem'}}>
+            {videoTestimonials.slice(0, 3).map((v, idx) => (
+              <div key={idx} className="card" style={{display: 'flex', flexDirection: 'column', borderRadius: '1rem', overflow: 'hidden'}}>
+                <div style={{width: '100%', paddingBottom: '56.25%', position: 'relative', background: 'rgba(45, 27, 71, 0.4)', marginBottom: '1rem', overflow: 'hidden', borderRadius: '0.75rem'}}>
+                  <iframe
+                    src={v.videoUrl}
+                    title={v.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '0.75rem'}}
+                  />
+                </div>
+                <h3 style={{fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem', color: 'var(--color-accent)'}}>{v.title}</h3>
+                <p style={{fontSize: '0.9rem', color: 'var(--color-text-subtle)', marginBottom: '0.75rem', flex: 1}}>{v.description}</p>
+                <div style={{fontSize: '0.8rem', color: 'var(--color-text-muted)'}}>{v.name} • {v.role}</div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 

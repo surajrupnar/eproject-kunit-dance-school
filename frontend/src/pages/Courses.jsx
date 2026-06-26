@@ -276,7 +276,7 @@ export default function Courses(){
           className="btn-primary"
           onClick={() => {
             const waNumber = '919665532331' // +91 country code + 9665532331
-            const message = "I\u2019m excited about the opportunity to join your academy and would love to learn more about your admission process, class schedules, and training programs. Could you please share the details on how I can enroll and become part of the K-Unit"
+            const message = "I\u2019m excited about the opportunity to join your academy and would love to learn more about your admission process, class schedules, and training programs. Could you please share the details on how I can enroll and become part of the K-Unit-Dace-School community? Thank you!"
             const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`
             try { window.open(url, '_blank') } catch (err) { console.warn('Could not open WhatsApp URL', err) }
           }}
