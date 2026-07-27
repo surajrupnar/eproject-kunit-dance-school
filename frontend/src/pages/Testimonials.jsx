@@ -1,31 +1,32 @@
 import React, { useState } from 'react'
+import { WHATSAPP_CLEAN_NUMBER, WHATSAPP_DEFAULT_MESSAGE_ENCODED } from '../constants'
 
 const textTestimonials = [
   {
-    name: 'Asha Kumar',
+    name: 'Megha Wadhwa',
     role: 'Parent',
-    age: '35',
-    text: 'My son improved his confidence and technique within just 3 months. The instructors are amazing and really care about each student.',
+    age: '31',
+    text: 'I have improved my confidence and technique within just 3 months. The instructors are amazing and really care about each student.',
     rating: 5
   },
   {
-    name: 'Rajat Singh',
+    name: 'Saniya Motwani',
     role: 'Student',
     age: '16',
     text: 'Best place to learn contemporary and hip hop. The energy here is incredible, and I\'ve made friends for life.',
     rating: 5
   },
   {
-    name: 'Priya Patel',
-    role: 'Parent',
-    age: '40',
-    text: 'My daughter loves her Bollywood classes. She\'s performing on stage now and it\'s amazing to see her confidence grow.',
+    name: 'Parul Wadhwa',
+    role: 'Student',
+    age: '21',
+    text: 'The choreography is always fresh and exciting. I\'ve learned so much about different dance styles in just a year.',
     rating: 5
   },
   {
-    name: 'Vikram Sharma',
+    name: 'Anikita Nirankari',
     role: 'Student',
-    age: '20',
+    age: '25  ',
     text: 'The choreography is always fresh and exciting. I\'ve learned so much about different dance styles in just a year.',
     rating: 5
   }
@@ -36,17 +37,17 @@ const videoTestimonials = [
     name: 'Karan Gaikwad',
     role: 'choreography by K-Unit-Dance-School',
     age: 'Age group 10-18',
-    title: 'DANCE COVER VIDEO by K-UNIT-DANCE-SCHOOL',
-    description: 'SHRI KRISHNNA | DANCE COVER VIDEO | K UNIT DANCE SCHOOL .',
-    videoUrl: 'https://www.youtube.com/embed/5-QwyCSDkWM'
+    title: 'Feedback for K-UNIT-DANCE-SCHOOL',
+    description: 'Students Feedback | K UNIT DANCE SCHOOL .',
+    videoUrl: 'https://www.youtube.com/embed/HN8qwwskVEg'
   },
   {
     name: 'Karan Gaikwad',
     role: 'choreography by K-Unit-Dance-School',
     age: 'Age group 18-25',
-    title: 'TAMMA the (fearless brother) new action short film / by Karan Gaikwad',
-    description: 'Choreography by K-Unit-Dance-School',
-    videoUrl: 'https://www.youtube.com/embed/ichiKk0he4U'
+    title: 'Feedback for K-UNIT-DANCE-SCHOOL',
+    description: 'Students Feedback | K UNIT DANCE SCHOOL .',
+    videoUrl: 'https://www.youtube.com/embed/RrQy3GwxPac'
   },
   {
     name: 'K Unit Dance School',
@@ -54,7 +55,34 @@ const videoTestimonials = [
     age: 'All ages',
     title: 'K Unit Dance School - Best Dance Studio in City',
     description: 'A glimpse of our energetic performances and studio spirit.',
-    videoUrl: 'https://www.youtube.com/embed/1sAcyoVxQEk'
+    videoUrl: 'https://www.youtube.com/embed/sJW9Ki6lmgY'
+  }
+]
+
+const kdsSpotlights = [
+  {
+    name: 'K Unit Spotlight One',
+    role: 'Performance highlight',
+    age: 'All ages',
+    title: 'KDS Spotlight - SHRI KRISHNNA | DANCE COVER VIDEO | K UNIT DANCE SCHOOL ',
+    description: 'An energetic spotlight performance from our students.',
+    videoUrl: 'https://www.youtube.com/embed/QwyCSDkWM'
+  },
+  {
+    name: 'K Unit Spotlight Two',
+    role: 'Performance highlight',
+    age: 'All ages',
+    title: 'KDS Spotlight - Choreography Showcase',
+    description: 'A choreography showcase featuring our top routines.',
+    videoUrl: 'https://www.youtube.com/embed/ichiKk0he4U'
+  },
+  {
+    name: 'K Unit Spotlight Three',
+    role: 'Performance highlight',
+    age: 'All ages',
+    title: 'KDS Spotlight - Grand Wedding sangeet choreography ',
+    description: 'Highlights from our recent Grand Wedding sangeet choreography .',
+    videoUrl: 'https://www.youtube.com/embed/J7xt1sf3Lgk'
   }
 ]
 
@@ -333,7 +361,7 @@ export default function Testimonials(){
             <p style={{color: 'var(--color-text-muted)', fontSize: '1rem'}}>A curated set of our standout dance videos and performance highlights.</p>
           </div>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem'}}>
-            {videoTestimonials.slice(0, 3).map((v, idx) => (
+            {kdsSpotlights.map((v, idx) => (
               <div key={idx} className="card" style={{display: 'flex', flexDirection: 'column', borderRadius: '1rem', overflow: 'hidden'}}>
                 <div style={{width: '100%', paddingBottom: '56.25%', position: 'relative', background: 'rgba(45, 27, 71, 0.4)', marginBottom: '1rem', overflow: 'hidden', borderRadius: '0.75rem'}}>
                   <iframe
@@ -512,7 +540,14 @@ export default function Testimonials(){
         <p style={{color: 'var(--color-text-muted)', marginBottom: '2rem', fontSize: '1.05rem'}}>
           Be part of a thriving community of dancers and create your own success story
         </p>
-        <button className="btn-primary" style={{fontSize: '1rem', fontWeight: '600'}}>
+        <button
+          className="btn-primary"
+          style={{fontSize: '1rem', fontWeight: '600'}}
+          onClick={() => {
+            const url = `https://wa.me/${WHATSAPP_CLEAN_NUMBER}?text=${WHATSAPP_DEFAULT_MESSAGE_ENCODED}`
+            try { window.open(url, '_blank', 'noopener') } catch (err) { console.warn('Could not open WhatsApp URL', err) }
+          }}
+        >
           Start Your Journey Today 🕺
         </button>
       </div>

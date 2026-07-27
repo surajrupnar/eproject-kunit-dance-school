@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { WHATSAPP_CLEAN_NUMBER } from '../constants'
 
 export default function Contact(){
   const [form, setForm] = useState({name:'',email:'',phone:'',message:''})
@@ -13,7 +14,7 @@ export default function Contact(){
       return
     }
 
-    const recipientPhone = '919665532331'
+    const recipientPhone = WHATSAPP_CLEAN_NUMBER
     const message = [
       `New contact message from ${form.name}`,
       `Email: ${form.email}`,

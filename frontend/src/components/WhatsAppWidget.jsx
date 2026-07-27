@@ -1,8 +1,9 @@
 import React from 'react'
+import { WHATSAPP_CLEAN_NUMBER, WHATSAPP_DEFAULT_MESSAGE_ENCODED } from '../constants'
 
-export default function WhatsAppWidget({ phoneNumber }){
+export default function WhatsAppWidget({ phoneNumber = WHATSAPP_CLEAN_NUMBER }){
   const clean = (phoneNumber || '').replace(/[^0-9]/g, '')
-  const text = encodeURIComponent('Hi K Unit, I want to inquire about your dance batches...')
+  const text = WHATSAPP_DEFAULT_MESSAGE_ENCODED
   // Use the api.whatsapp.com URL format which includes explicit phone and extra params
   const href = `https://api.whatsapp.com/send/?phone=${clean}&text=${text}&type=phone_number&app_absent=0`
 

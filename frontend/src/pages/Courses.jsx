@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { WHATSAPP_CLEAN_NUMBER } from '../constants'
 import foundationCourseImage from '../assets/cards/foundation-course.png'
 import technicalCourseImage from '../assets/cards/intermediate-course.png'
 import advancedCourseImage from '../assets/cards/advanced-course.png'
@@ -45,19 +46,7 @@ const CourseIllustration = ({ type }) => {
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.6)">BOLLYWOOD</text>
       </svg>
     ),
-    'Salsa': (
-      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
-        <defs>
-          <linearGradient id="salsa" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#ff006e', stopOpacity: 0.2}} />
-            <stop offset="100%" style={{stopColor: '#8338ec', stopOpacity: 0.1}} />
-          </linearGradient>
-        </defs>
-        <rect width="160" height="160" fill="url(#salsa)" rx="8"/>
-        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ff006e">🎶</text>
-        <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.6)">SALSA</text>
-      </svg>
-    ),
+    
     'default': (
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
@@ -140,13 +129,25 @@ export default function Courses(){
       .then(r => setCourses(r.data || []))
       .catch(()=>{
         setCourses([
-          {id:1, name:'Hip Hop', ageGroup:'10-18', timing:'6pm - 7pm', fee:20, description: 'High-energy urban dance style with modern beats'},
-          {id:2, name:'Contemporary', ageGroup:'12-25', timing:'7pm - 8pm', fee:25, description: 'Expressive fluid movements with emotional connection'},
-          {id:3, name:'Bollywood', ageGroup:'8-20', timing:'5pm - 6pm', fee:22, description: 'Traditional Indian film dance with vibrant choreography'},
-          {id:4, name:'Salsa', ageGroup:'15+', timing:'8pm - 9pm', fee:25, description: 'Latin dance with rhythm and partner connection'}
+          {id:1, name:'Hip Hop', ageGroup:'10-18', timing:'6pm - 7pm', description: 'High-energy urban dance style with modern beats'},
+          {id:2, name:'Contemporary', ageGroup:'12-25', timing:'7pm - 8pm', description: 'Expressive fluid movements with emotional connection'},
+          {id:3, name:'Bollywood', ageGroup:'8-20', timing:'5pm - 6pm', description: 'Traditional Indian film dance with vibrant choreography'},
+        
         ])
       })
   },[])
+
+  const displayCourses = [...courses]
+  while (displayCourses.length < 3) {
+    displayCourses.push({
+      id: `placeholder-${displayCourses.length + 1}`,
+      name: 'Urban Jazz',
+      ageGroup: 'All Ages',
+      timing: 'Coming Soon',
+      description: 'A fresh new course blending street style and musicality, launching soon.',
+      placeholder: true,
+    })
+  }
 
   return (
     <div style={{maxWidth: '1280px', margin: '0 auto', width: '100%'}}>
@@ -155,18 +156,19 @@ export default function Courses(){
         <p style={{fontSize: '1rem', color: 'var(--color-text-muted)'}}>Choose from diverse dance styles taught by expert instructors</p>
       </div>
 
-      <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem'}}>
-        {courses.map(c => (
+      <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem'}}>
+        {displayCourses.map(c => (
           <div key={c.id} className="card dance-shadow-1" style={{
             display: 'flex',
             flexDirection: 'column',
             height: '100%',
             cursor: 'pointer',
-            borderRadius: '1rem'
+            borderRadius: '1rem',
+            padding: '1.5rem'
           }}>
             {/* Course illustration */}
             <div style={{
-              height: '160px',
+              height: '180px',
               borderRadius: '0.75rem',
               marginBottom: '1.5rem',
               overflow: 'hidden',
@@ -192,9 +194,6 @@ export default function Courses(){
               </div>
               <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                 <span>⏰ Time: {c.timing}</span>
-              </div>
-              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.75rem', borderTop: '1px solid rgba(255, 0, 110, 0.1)'}}>
-                <span style={{fontSize: '1.125rem', fontWeight: '700', color: 'var(--color-accent)'}}>₹{c.fee}/month</span>
               </div>
             </div>
 
@@ -275,7 +274,7 @@ export default function Courses(){
         <button
           className="btn-primary"
           onClick={() => {
-            const waNumber = '919665532331' // +91 country code + 9665532331
+            const waNumber = WHATSAPP_CLEAN_NUMBER
             const message = "I\u2019m excited about the opportunity to join your academy and would love to learn more about your admission process, class schedules, and training programs. Could you please share the details on how I can enroll and become part of the K-Unit-Dace-School community? Thank you!"
             const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`
             try { window.open(url, '_blank') } catch (err) { console.warn('Could not open WhatsApp URL', err) }
