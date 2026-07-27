@@ -90,7 +90,7 @@ export default function Home(){
       <div style={{position: 'relative', zIndex: 2, width: '100%', maxWidth: '1100px', margin: '0 auto', padding: '4rem 1.5rem'}}>
         <div style={{display: 'flex', flexDirection: 'column', gap: '2.5rem', padding: '3rem 2rem', borderRadius: '2rem', background: 'rgba(9, 5, 22, 0.84)', boxShadow: '0 30px 90px rgba(0, 0, 0, 0.35)', border: '1px solid rgba(255, 255, 255, 0.06)'}}>
           <div style={{display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'rgba(255, 255, 255, 0.08)', padding: '0.75rem 1.25rem', borderRadius: '999px', color: '#fff', fontWeight: 700, letterSpacing: '0.02em', fontSize: '0.95rem', width: 'fit-content'}}>
-            ISO 9001:2015 Certified | Maharashtra Ratna Awarded Dance School
+            ISO 9001:2015 Certified | Maharashtra Ratna Awarded Dance School in Maharashtra | 1000+ Students Trained | 100+ Awards Won
           </div>
 
           <div style={{display: 'grid', gap: '1.25rem'}}>
