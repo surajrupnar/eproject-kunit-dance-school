@@ -225,7 +225,7 @@ export default function Courses(){
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '600px',
+              maxWidth: '720px',
               maxHeight: '85vh',
               overflowY: 'auto',
               background: 'linear-gradient(160deg, var(--color-paper-2), var(--color-paper))',
