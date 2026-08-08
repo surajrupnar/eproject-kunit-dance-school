@@ -142,7 +142,9 @@ export default function Courses(){
       name: 'Urban Jazz',
       shortDescription: 'A fresh new course blending street style and musicality, launching soon.',
       longDescription: 'A fresh new course blending street style and musicality, launching soon. More details to be announced.',
+      highlightsTitle: "What you'll learn",
       highlights: ['Street style and musicality', 'Fresh choreography', 'Launching soon'],
+      images: [],
       placeholder: true,
     })
   }
@@ -289,6 +291,20 @@ export default function Courses(){
                     </li>
                   ))}
                 </ul>
+              </div>
+            )}
+
+            {selected.images && selected.images.length > 0 && (
+              <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '0.75rem', marginBottom: '2rem'}}>
+                {selected.images.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`${selected.name} photo ${i + 1}`}
+                    loading="lazy"
+                    style={{width: '100%', aspectRatio: '1', objectFit: 'cover', borderRadius: '0.75rem', border: '1px solid rgba(255, 255, 255, 0.1)'}}
+                  />
+                ))}
               </div>
             )}
 

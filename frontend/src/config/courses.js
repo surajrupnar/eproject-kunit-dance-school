@@ -1,3 +1,12 @@
+import portfolio01 from '../assets/protfolio/portfolio-page-01.jpg'
+import portfolio02 from '../assets/protfolio/portfolio-page-02.jpg'
+import portfolio03 from '../assets/protfolio/portfolio-page-03.jpg'
+import portfolio04 from '../assets/protfolio/portfolio-page-04.jpg'
+import portfolio05 from '../assets/protfolio/portfolio-page-05.jpg'
+import portfolio06 from '../assets/protfolio/portfolio-page-06.jpg'
+import portfolio07 from '../assets/protfolio/portfolio-page-07.jpg'
+import portfolio08 from '../assets/protfolio/portfolio-page-08.jpg'
+
 export const DEFAULT_HIGHLIGHTS_TITLE = "What you'll learn"
 
 export const COURSES = [
@@ -12,7 +21,8 @@ export const COURSES = [
       'Foundation grooves, popping and locking basics',
       'Freestyle confidence and stage presence',
       'No prior dance experience needed'
-    ]
+    ],
+    images: [portfolio01, portfolio02, portfolio03]
   },
   {
     id: 2,
@@ -25,7 +35,8 @@ export const COURSES = [
       'Fluidity, breath, and emotional storytelling',
       'Body awareness, control, and artistry',
       'Suitable for dancers at any level'
-    ]
+    ],
+    images: [portfolio04, portfolio05, portfolio06]
   },
   {
     id: 3,
@@ -38,6 +49,7 @@ export const COURSES = [
       'Expressive expressions and rhythmic footwork',
       'Full-fledged routines from Indian cinema',
       'Fun for all ages and levels'
-    ]
+    ],
+    images: [portfolio07, portfolio08, portfolio01]
   }
 ]
