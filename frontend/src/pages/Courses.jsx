@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { WHATSAPP_CLEAN_NUMBER } from '../constants'
+import { COURSES } from '../config/courses'
 import foundationCourseImage from '../assets/cards/foundation-course.png'
 import technicalCourseImage from '../assets/cards/intermediate-course.png'
 import advancedCourseImage from '../assets/cards/advanced-course.png'
@@ -122,7 +122,6 @@ const DiplomaIllustration = ({ title }) => {
 }
 
 export default function Courses(){
-  const [courses, setCourses] = useState([])
   const [selected, setSelected] = useState(null)
 
   useEffect(() => {
@@ -136,20 +135,7 @@ export default function Courses(){
     }
   }, [selected])
 
-  useEffect(()=>{
-    axios.get('/api/courses')
-      .then(r => setCourses(r.data || []))
-      .catch(()=>{
-        setCourses([
-          {id:1, name:'Hip Hop', ageGroup:'10-18', timing:'6pm - 7pm', description: 'High-energy urban dance style with modern beats'},
-          {id:2, name:'Contemporary', ageGroup:'12-25', timing:'7pm - 8pm', description: 'Expressive fluid movements with emotional connection'},
-          {id:3, name:'Bollywood', ageGroup:'8-20', timing:'5pm - 6pm', description: 'Traditional Indian film dance with vibrant choreography'},
-        
-        ])
-      })
-  },[])
-
-  const displayCourses = [...courses]
+  const displayCourses = [...COURSES]
   while (displayCourses.length < 3) {
     displayCourses.push({
       id: `placeholder-${displayCourses.length + 1}`,
