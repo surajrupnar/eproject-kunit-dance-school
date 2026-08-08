@@ -283,7 +283,7 @@ export default function Courses(){
             {selected.highlights && selected.highlights.length > 0 && (
               <div style={{marginBottom: '2rem'}}>
                 <h3 style={{fontSize: '1rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--color-text)'}}>{selected.highlightsTitle || DEFAULT_HIGHLIGHTS_TITLE}</h3>
-                <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+                <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '0.6rem 1.5rem', gridTemplateColumns: selected.highlights.length > 5 ? '1fr 1fr' : '1fr'}}>
                   {selected.highlights.map((item, i) => (
                     <li key={i} style={{display: 'flex', gap: '0.6rem', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6, color: 'var(--color-text-muted)'}}>
                       <span style={{marginTop: '0.2rem', color: '#ff006e', fontWeight: 'bold'}}>✦</span>

@@ -15,12 +15,10 @@ export const COURSES = [
     name: 'Hip Hop',
     shortDescription: 'High-energy urban dance style with modern beats',
     longDescription: 'High-energy urban dance classes built around modern beats and street culture. Learn foundational grooves, popping and locking basics, and freestyle confidence in a fun and energetic space. No prior dance experience needed — just bring your energy and love for the music.',
-    highlightsTitle: "What you'll learn",
+    highlightsTitle: "Styles you'll learn",
     highlights: [
-      'Built on modern beats and street culture',
-      'Foundation grooves, popping and locking basics',
-      'Freestyle confidence and stage presence',
-      'No prior dance experience needed'
+      '⁠Breaking (Breakdance)','Popping', 'Locking', 'House Dance','Krumping',
+      'Waacking','⁠Voguing'
     ],
     images: [portfolio01, portfolio02, portfolio03]
   },
