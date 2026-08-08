@@ -123,6 +123,18 @@ const DiplomaIllustration = ({ title }) => {
 
 export default function Courses(){
   const [courses, setCourses] = useState([])
+  const [selected, setSelected] = useState(null)
+
+  useEffect(() => {
+    if (!selected) return
+    document.body.style.overflow = 'hidden'
+    const onKey = (e) => { if (e.key === 'Escape') setSelected(null) }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [selected])
 
   useEffect(()=>{
     axios.get('/api/courses')
@@ -197,13 +209,145 @@ export default function Courses(){
               </div>
             </div>
 
-            {/* Enroll button */}
-            <button className="btn-primary" style={{width: '100%', border: 'none'}}>
-              Enroll Now →
+            {/* Details button */}
+            <button className="btn-primary" style={{width: '100%', border: 'none'}} onClick={() => setSelected(c)}>
+              Details →
             </button>
           </div>
         ))}
       </div>
+
+      {/* Course details modal */}
+      {selected && (
+        <div
+          onClick={() => setSelected(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(9, 5, 22, 0.8)',
+            backdropFilter: 'blur(8px)',
+            zIndex: 1000,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem'
+          }}
+        >
+          <style>{`
+            @keyframes modal-pop {
+              0% { opacity: 0; transform: scale(0.92) translateY(12px); }
+              100% { opacity: 1; transform: scale(1) translateY(0); }
+            }
+          `}</style>
+          <div
+            onClick={e => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${selected.name} details`}
+            style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '600px',
+              maxHeight: '85vh',
+              overflowY: 'auto',
+              background: 'linear-gradient(160deg, var(--color-paper-2), var(--color-paper))',
+              border: '1px solid rgba(255, 0, 110, 0.25)',
+              borderRadius: '1.25rem',
+              padding: '2rem',
+              boxShadow: '0 30px 90px rgba(0, 0, 0, 0.55)',
+              animation: 'modal-pop 260ms ease-out'
+            }}
+          >
+            <div style={{height: '4px', width: '4rem', borderRadius: '999px', background: 'linear-gradient(90deg, #ff006e, #8338ec, #3a86ff)', marginBottom: '1.25rem'}} />
+            <button
+              onClick={() => setSelected(null)}
+              aria-label="Close details"
+              style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                width: '34px',
+                height: '34px',
+                borderRadius: '50%',
+                border: '1px solid rgba(255, 255, 255, 0.15)',
+                background: 'rgba(255, 255, 255, 0.06)',
+                color: 'var(--color-text-muted)',
+                fontSize: '1.1rem',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 200ms ease-out'
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255, 0, 110, 0.2)'; e.currentTarget.style.color = '#fff' }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)'; e.currentTarget.style.color = 'var(--color-text-muted)' }}
+            >
+              ✕
+            </button>
+
+            <h2 style={{
+              fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
+              fontWeight: '900',
+              marginBottom: '0.75rem',
+              background: 'linear-gradient(90deg, #ff006e, #8338ec, #3a86ff)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              paddingRight: '2rem'
+            }}>
+              {selected.name}
+            </h2>
+
+            <div style={{display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem'}}>
+              <span style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                padding: '0.35rem 0.9rem',
+                borderRadius: '999px',
+                background: 'rgba(255, 0, 110, 0.12)',
+                border: '1px solid rgba(255, 0, 110, 0.25)',
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                color: 'var(--color-text)'
+              }}>
+                👥 Age: {selected.ageGroup}
+              </span>
+              <span style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                padding: '0.35rem 0.9rem',
+                borderRadius: '999px',
+                background: 'rgba(131, 56, 236, 0.12)',
+                border: '1px solid rgba(131, 56, 236, 0.25)',
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                color: 'var(--color-text)'
+              }}>
+                ⏰ Time: {selected.timing}
+              </span>
+            </div>
+
+            <p style={{fontSize: '1.05rem', lineHeight: 1.75, color: 'var(--color-text-muted)', marginBottom: '2rem'}}>
+              {selected.description || 'Professional dance instruction for all levels'}
+            </p>
+
+            <button
+              className="btn-primary"
+              style={{width: '100%', border: 'none', fontSize: '1rem', padding: '0.9rem 1.5rem'}}
+              onClick={() => {
+                const waNumber = WHATSAPP_CLEAN_NUMBER
+                const message = `Hi K Unit, I'd like to enroll in the ${selected.name} course (Age: ${selected.ageGroup}, Timing: ${selected.timing}). Please share the details.`
+                const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`
+                try { window.open(url, '_blank') } catch (err) { console.warn('Could not open WhatsApp URL', err) }
+              }}
+            >
+              Enroll Now via WhatsApp
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Diploma Certification Course section */}
       <div style={{marginTop: '4rem', textAlign: 'center'}}>
