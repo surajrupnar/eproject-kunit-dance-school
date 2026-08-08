@@ -142,6 +142,7 @@ export default function Courses(){
       name: 'Urban Jazz',
       shortDescription: 'A fresh new course blending street style and musicality, launching soon.',
       longDescription: 'A fresh new course blending street style and musicality, launching soon. More details to be announced.',
+      highlights: ['Street style and musicality', 'Fresh choreography', 'Launching soon'],
       placeholder: true,
     })
   }
@@ -276,6 +277,20 @@ export default function Courses(){
             <p style={{fontSize: '1.05rem', lineHeight: 1.75, color: 'var(--color-text-muted)', marginBottom: '2rem'}}>
               {selected.longDescription || 'Professional dance instruction for all levels'}
             </p>
+
+            {selected.highlights && selected.highlights.length > 0 && (
+              <div style={{marginBottom: '2rem'}}>
+                <h3 style={{fontSize: '1rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--color-text)'}}>What you'll learn</h3>
+                <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+                  {selected.highlights.map((item, i) => (
+                    <li key={i} style={{display: 'flex', gap: '0.6rem', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6, color: 'var(--color-text-muted)'}}>
+                      <span style={{marginTop: '0.2rem', color: '#ff006e', fontWeight: 'bold'}}>✦</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <button
               className="btn-primary"
