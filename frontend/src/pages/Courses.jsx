@@ -140,9 +140,8 @@ export default function Courses(){
     displayCourses.push({
       id: `placeholder-${displayCourses.length + 1}`,
       name: 'Urban Jazz',
-      ageGroup: 'All Ages',
-      timing: 'Coming Soon',
-      description: 'A fresh new course blending street style and musicality, launching soon.',
+      shortDescription: 'A fresh new course blending street style and musicality, launching soon.',
+      longDescription: 'A fresh new course blending street style and musicality, launching soon. More details to be announced.',
       placeholder: true,
     })
   }
@@ -182,18 +181,8 @@ export default function Courses(){
             </h3>
             
             <p style={{fontSize: '0.875rem', color: 'var(--color-text-subtle)', marginBottom: '1rem', flex: 1}}>
-              {c.description || 'Professional dance instruction for all levels'}
+              {c.shortDescription || 'Professional dance instruction for all levels'}
             </p>
-
-            {/* Course details */}
-            <div style={{display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem', fontSize: '0.875rem', color: 'var(--color-text-muted)'}}>
-              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                <span>👥 Age: {c.ageGroup}</span>
-              </div>
-              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                <span>⏰ Time: {c.timing}</span>
-              </div>
-            </div>
 
             {/* Details button */}
             <button className="btn-primary" style={{width: '100%', border: 'none'}} onClick={() => setSelected(c)}>
@@ -244,7 +233,7 @@ export default function Courses(){
               animation: 'modal-pop 260ms ease-out'
             }}
           >
-            <div style={{height: '4px', width: '4rem', borderRadius: '999px', background: 'linear-gradient(90deg, #ff006e, #8338ec, #3a86ff)', marginBottom: '1.25rem'}} />
+            <div style={{height: '4px', width: '4rem', borderRadius: '999px', background: 'linear-gradient(90deg, #ff006e, #8338ec, #3a86ff)', marginBottom: '1.5rem'}} />
             <button
               onClick={() => setSelected(null)}
               aria-label="Close details"
@@ -284,39 +273,8 @@ export default function Courses(){
               {selected.name}
             </h2>
 
-            <div style={{display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem'}}>
-              <span style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.35rem',
-                padding: '0.35rem 0.9rem',
-                borderRadius: '999px',
-                background: 'rgba(255, 0, 110, 0.12)',
-                border: '1px solid rgba(255, 0, 110, 0.25)',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                color: 'var(--color-text)'
-              }}>
-                👥 Age: {selected.ageGroup}
-              </span>
-              <span style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.35rem',
-                padding: '0.35rem 0.9rem',
-                borderRadius: '999px',
-                background: 'rgba(131, 56, 236, 0.12)',
-                border: '1px solid rgba(131, 56, 236, 0.25)',
-                fontSize: '0.875rem',
-                fontWeight: '600',
-                color: 'var(--color-text)'
-              }}>
-                ⏰ Time: {selected.timing}
-              </span>
-            </div>
-
             <p style={{fontSize: '1.05rem', lineHeight: 1.75, color: 'var(--color-text-muted)', marginBottom: '2rem'}}>
-              {selected.description || 'Professional dance instruction for all levels'}
+              {selected.longDescription || 'Professional dance instruction for all levels'}
             </p>
 
             <button
@@ -324,7 +282,7 @@ export default function Courses(){
               style={{width: '100%', border: 'none', fontSize: '1rem', padding: '0.9rem 1.5rem'}}
               onClick={() => {
                 const waNumber = WHATSAPP_CLEAN_NUMBER
-                const message = `Hi K Unit, I'd like to enroll in the ${selected.name} course (Age: ${selected.ageGroup}, Timing: ${selected.timing}). Please share the details.`
+                const message = `Hi K Unit, I'd like to enroll in the ${selected.name} course. Please share the details.`
                 const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`
                 try { window.open(url, '_blank') } catch (err) { console.warn('Could not open WhatsApp URL', err) }
               }}

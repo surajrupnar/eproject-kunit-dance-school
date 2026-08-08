@@ -2,22 +2,19 @@ export const COURSES = [
   {
     id: 1,
     name: 'Hip Hop',
-    ageGroup: '10-18',
-    timing: '6pm - 7pm',
-    description: 'High-energy urban dance style with modern beats'
+    shortDescription: 'High-energy urban dance style with modern beats',
+    longDescription: 'High-energy urban dance classes built around modern beats and street culture. Learn foundational grooves, popping and locking basics, and freestyle confidence in a fun and energetic space. No prior dance experience needed — just bring your energy and love for the music.'
   },
   {
     id: 2,
     name: 'Contemporary',
-    ageGroup: '12-25',
-    timing: '7pm - 8pm',
-    description: 'Expressive fluid movements with emotional connection'
+    shortDescription: 'Expressive fluid movements with emotional connection',
+    longDescription: 'Contemporary dance blends classical technique with modern, expressive movement. Classes focus on fluidity, breath, and emotional storytelling while building body awareness, control, and artistry. Perfect for dancers who want to move with freedom, depth, and grace.'
   },
   {
     id: 3,
     name: 'Bollywood',
-    ageGroup: '8-20',
-    timing: '5pm - 6pm',
-    description: 'Traditional Indian film dance with vibrant choreography'
+    shortDescription: 'Traditional Indian film dance with vibrant choreography',
+    longDescription: 'Step into the colorful world of Bollywood dance — a vibrant fusion of traditional Indian dance and modern film choreography. Learn expressive expressions, rhythmic footwork, and full-fledged routines that bring the energy of Indian cinema to life. Fun for all ages and levels.'
   }
 ]
