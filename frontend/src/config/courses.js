@@ -1,9 +1,12 @@
+export const DEFAULT_HIGHLIGHTS_TITLE = "What you'll learn"
+
 export const COURSES = [
   {
     id: 1,
     name: 'Hip Hop',
     shortDescription: 'High-energy urban dance style with modern beats',
     longDescription: 'High-energy urban dance classes built around modern beats and street culture. Learn foundational grooves, popping and locking basics, and freestyle confidence in a fun and energetic space. No prior dance experience needed — just bring your energy and love for the music.',
+    highlightsTitle: "What you'll learn",
     highlights: [
       'Built on modern beats and street culture',
       'Foundation grooves, popping and locking basics',
@@ -16,6 +19,7 @@ export const COURSES = [
     name: 'Contemporary',
     shortDescription: 'Expressive fluid movements with emotional connection',
     longDescription: 'Contemporary dance blends classical technique with modern, expressive movement. Classes focus on fluidity, breath, and emotional storytelling while building body awareness, control, and artistry. Perfect for dancers who want to move with freedom, depth, and grace.',
+    highlightsTitle: "What you'll learn",
     highlights: [
       'Classical technique blended with modern movement',
       'Fluidity, breath, and emotional storytelling',
@@ -28,6 +32,7 @@ export const COURSES = [
     name: 'Bollywood',
     shortDescription: 'Traditional Indian film dance with vibrant choreography',
     longDescription: 'Step into the colorful world of Bollywood dance — a vibrant fusion of traditional Indian dance and modern film choreography. Learn expressive expressions, rhythmic footwork, and full-fledged routines that bring the energy of Indian cinema to life. Fun for all ages and levels.',
+    highlightsTitle: "What you'll learn",
     highlights: [
       'Vibrant fusion of traditional Indian and film dance',
       'Expressive expressions and rhythmic footwork',

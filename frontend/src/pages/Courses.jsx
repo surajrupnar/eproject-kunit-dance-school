@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { WHATSAPP_CLEAN_NUMBER } from '../constants'
-import { COURSES } from '../config/courses'
+import { COURSES, DEFAULT_HIGHLIGHTS_TITLE } from '../config/courses'
 import foundationCourseImage from '../assets/cards/foundation-course.png'
 import technicalCourseImage from '../assets/cards/intermediate-course.png'
 import advancedCourseImage from '../assets/cards/advanced-course.png'
@@ -280,7 +280,7 @@ export default function Courses(){
 
             {selected.highlights && selected.highlights.length > 0 && (
               <div style={{marginBottom: '2rem'}}>
-                <h3 style={{fontSize: '1rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--color-text)'}}>What you'll learn</h3>
+                <h3 style={{fontSize: '1rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--color-text)'}}>{selected.highlightsTitle || DEFAULT_HIGHLIGHTS_TITLE}</h3>
                 <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
                   {selected.highlights.map((item, i) => (
                     <li key={i} style={{display: 'flex', gap: '0.6rem', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6, color: 'var(--color-text-muted)'}}>
