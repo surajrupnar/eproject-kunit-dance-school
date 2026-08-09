@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { WHATSAPP_CLEAN_NUMBER } from '../constants'
 
 export default function Contact(){
   const [form, setForm] = useState({name:'',email:'',phone:'',message:''})
@@ -12,15 +13,29 @@ export default function Contact(){
       setStatus('validation')
       return
     }
+
+    const recipientPhone = WHATSAPP_CLEAN_NUMBER
+    const message = [
+      `New contact message from ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || 'N/A'}`,
+      `Message: ${form.message}`
+    ].join('\n')
+    const waUrl = `https://wa.me/${recipientPhone}?text=${encodeURIComponent(message)}`
+
+    try {
+      window.open(waUrl, '_blank', 'noopener,noreferrer')
+    } catch (err) {
+      console.warn('Could not open WhatsApp URL', err)
+    }
+
+    setStatus('sent')
+    setForm({name:'',email:'',phone:'',message:''})
+    setTimeout(() => setStatus(null), 5000)
+
     axios.post('/api/inquiries', form)
-      .then(()=> {
-        setStatus('sent')
-        setForm({name:'',email:'',phone:'',message:''})
-        setTimeout(() => setStatus(null), 5000)
-      })
-      .catch(()=> {
-        setStatus('error')
-        setTimeout(() => setStatus(null), 5000)
+      .catch((err) => {
+        console.warn('Could not submit inquiry to API', err)
       })
   }
 
@@ -56,7 +71,14 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>📍</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Location</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>K Unit Dance School Studio, Block No. 47,Nandhi Bazar, near water tank, Koyna Colony, Gandhinagar, Maharashtra 416119</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=K+Unit+Dance+School+Studio%2C+Block+No.+47%2C+Nandhi+Bazar%2C+near+water+tank%2C+Koyna+Colony%2C+Gandhinagar%2C+Maharashtra+416119"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{fontSize: '0.95rem', color: 'var(--color-text-muted)', textDecoration: 'none', display: 'block', lineHeight: 1.7}}
+              >
+                K Unit Dance School Studio, Block No. 47, Nandhi Bazar, near water tank, Koyna Colony, Gandhinagar, Maharashtra 416119
+              </a>
             </div>
             
             <div className="card" style={{padding: '1.5rem'}}>
@@ -68,8 +90,17 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>📧</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Email</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>info@kunitdance.com</p>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@kunitdance.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)', textDecoration: 'none'}}
+              >
+                info@kunitdance.com
+              </a>
             </div>
+
+
 
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>🕒</div>

@@ -1,31 +1,32 @@
 import React, { useState } from 'react'
+import { WHATSAPP_CLEAN_NUMBER, WHATSAPP_DEFAULT_MESSAGE_ENCODED } from '../constants'
 
 const textTestimonials = [
   {
-    name: 'Asha Kumar',
+    name: 'Megha Wadhwa',
     role: 'Parent',
-    age: '35',
-    text: 'My son improved his confidence and technique within just 3 months. The instructors are amazing and really care about each student.',
+    age: '31',
+    text: 'I have improved my confidence and technique within just 3 months. The instructors are amazing and really care about each student.',
     rating: 5
   },
   {
-    name: 'Rajat Singh',
+    name: 'Saniya Motwani',
     role: 'Student',
     age: '16',
     text: 'Best place to learn contemporary and hip hop. The energy here is incredible, and I\'ve made friends for life.',
     rating: 5
   },
   {
-    name: 'Priya Patel',
-    role: 'Parent',
-    age: '40',
-    text: 'My daughter loves her Bollywood classes. She\'s performing on stage now and it\'s amazing to see her confidence grow.',
+    name: 'Parul Wadhwa',
+    role: 'Student',
+    age: '21',
+    text: 'The choreography is always fresh and exciting. I\'ve learned so much about different dance styles in just a year.',
     rating: 5
   },
   {
-    name: 'Vikram Sharma',
+    name: 'Anikita Nirankari',
     role: 'Student',
-    age: '20',
+    age: '25  ',
     text: 'The choreography is always fresh and exciting. I\'ve learned so much about different dance styles in just a year.',
     rating: 5
   }
@@ -33,20 +34,55 @@ const textTestimonials = [
 
 const videoTestimonials = [
   {
-    name: 'Ananya Gupta',
-    role: 'Student',
-    age: '17',
-    title: 'Hip Hop Journey',
-    description: 'My incredible journey learning hip hop dance',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    name: 'Karan Gaikwad',
+    role: 'choreography by K-Unit-Dance-School',
+    age: 'Age group 10-18',
+    title: 'Feedback for K-UNIT-DANCE-SCHOOL',
+    description: 'Students Feedback | K UNIT DANCE SCHOOL .',
+    videoUrl: 'https://www.youtube.com/embed/HN8qwwskVEg'
   },
   {
-    name: 'Arjun Verma',
-    role: 'Student',
-    age: '19',
-    title: 'Contemporary Dance Experience',
-    description: 'How contemporary dance changed my life',
-    videoUrl: 'https://www.youtube.com/embed/9bZkp7q19f0'
+    name: 'Karan Gaikwad',
+    role: 'choreography by K-Unit-Dance-School',
+    age: 'Age group 18-25',
+    title: 'Feedback for K-UNIT-DANCE-SCHOOL',
+    description: 'Students Feedback | K UNIT DANCE SCHOOL .',
+    videoUrl: 'https://www.youtube.com/embed/RrQy3GwxPac'
+  },
+  {
+    name: 'K Unit Dance School',
+    role: 'Performance highlights',
+    age: 'All ages',
+    title: 'K Unit Dance School - Best Dance Studio in City',
+    description: 'A glimpse of our energetic performances and studio spirit.',
+    videoUrl: 'https://www.youtube.com/embed/sJW9Ki6lmgY'
+  }
+]
+
+const kdsSpotlights = [
+  {
+    name: 'K Unit Spotlight One',
+    role: 'Performance highlight',
+    age: 'All ages',
+    title: 'KDS Spotlight - SHRI KRISHNNA | DANCE COVER VIDEO | K UNIT DANCE SCHOOL ',
+    description: 'An energetic spotlight performance from our students.',
+    videoUrl: 'https://www.youtube.com/embed/5-QwyCSDkWM'
+  },
+  {
+    name: 'K Unit Spotlight Two',
+    role: 'Performance highlight',
+    age: 'All ages',
+    title: 'KDS Spotlight - Choreography Showcase',
+    description: 'A choreography showcase featuring our top routines.',
+    videoUrl: 'https://www.youtube.com/embed/ichiKk0he4U'
+  },
+  {
+    name: 'K Unit Spotlight Three',
+    role: 'Performance highlight',
+    age: 'All ages',
+    title: 'KDS Spotlight - Grand Wedding sangeet choreography ',
+    description: 'Highlights from our recent Grand Wedding sangeet choreography .',
+    videoUrl: 'https://www.youtube.com/embed/J7xt1sf3Lgk'
   }
 ]
 
@@ -55,55 +91,55 @@ const youtubeTestimonials = [
     name: 'Dance Studio Reviews',
     title: 'K Unit Dance School - Best Dance Studio in City',
     channel: 'Local Reviews Channel',
-    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    thumbnail: '📹'
+    link: 'https://www.youtube.com/watch?v=1sAcyoVxQEk',
+    thumbnail: '🎬'
   },
   {
     name: 'Performance Highlights',
     title: 'K Unit Dance School Annual Recital 2024',
     channel: 'K Unit Official',
-    link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+    link: 'https://www.youtube.com/watch?v=RGriGxFf_6o',
     thumbnail: '🎬'
   },
   {
     name: 'Workshops & Classes',
     title: 'Summer Dance Workshop - Behind the Scenes',
     channel: 'K Unit Dance School',
-    link: 'https://www.youtube.com/watch?v=2_HXUhShhmk',
-    thumbnail: '🎥'
+    link: 'https://www.youtube.com/watch?v=xix8_KFzrxE&pp=0gcJCT4LAYcqIYzv',
+    thumbnail: '🎬'
   }
 ]
 
 const instagramTestimonials = [
   {
-    name: '@dance_student_2024',
-    title: 'Amazing transformation in 6 months!',
-    handle: 'dance_student_2024',
-    link: 'https://www.instagram.com/dance_student_2024',
-    likes: '342',
+    name: '@k_unit_dance_school__official',
+    title: 'Amazing dance!',
+    handle: '@k_unit_dance_school__official',
+    link: 'https://www.instagram.com/k_unit_dance_school__official/reel/DZsVFKGMgm3/',
+    likes: '7k+',
     emoji: '💃'
   },
   {
     name: '@hip_hop_vibes_',
     title: 'Living my best dance life at K Unit 🔥',
     handle: 'hip_hop_vibes_',
-    link: 'https://www.instagram.com/hip_hop_vibes_',
-    likes: '428',
+    link: 'https://www.instagram.com/p/DYtWP1fK0J7/',
+    likes: '',
     emoji: '🕺'
   },
   {
     name: '@bollywood_dancer_official',
     title: 'Grateful for amazing instructors and friends ✨',
     handle: 'bollywood_dancer_official',
-    link: 'https://www.instagram.com/bollywood_dancer_official',
-    likes: '521',
+    link: 'https://www.instagram.com/p/DPwJREKCqVG/',
+    likes: '',
     emoji: '💫'
   },
   {
     name: '@contemporary_soul',
     title: 'Dance is my therapy, K Unit is my home 🏠',
     handle: 'contemporary_soul',
-    link: 'https://www.instagram.com/contemporary_soul',
+    link: 'https://www.instagram.com/p/DO8Qj3zjC2r/',
     likes: '387',
     emoji: '🎭'
   }
@@ -151,6 +187,7 @@ export default function Testimonials(){
         {[
           { id: 'text', label: '💬 Text Testimonials', icon: '📝' },
           { id: 'video', label: '🎬 Video Testimonials', icon: '🎥' },
+           { id: 'spotlights', label: '🎬 KDS-spotlights', icon: '🎥' },
           { id: 'youtube', label: '▶️ YouTube Links', icon: '📹' },
           { id: 'instagram', label: '📸 Instagram', icon: '📷' }
         ].map(tab => (
@@ -168,7 +205,7 @@ export default function Testimonials(){
       {activeTab === 'text' && (
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem'}}>
           {textTestimonials.map((t, idx) => (
-            <div key={idx} className="card dance-shadow-3" style={{
+            <div key={idx} className="card" style={{
               display: 'flex',
               flexDirection: 'column',
               borderRadius: '1rem'
@@ -239,7 +276,7 @@ export default function Testimonials(){
       {activeTab === 'video' && (
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem'}}>
           {videoTestimonials.map((v, idx) => (
-            <div key={idx} className="card dance-shadow-1" style={{
+            <div key={idx} className="card" style={{
               display: 'flex',
               flexDirection: 'column',
               borderRadius: '1rem',
@@ -316,6 +353,35 @@ export default function Testimonials(){
         </div>
       )}
 
+      {/* KDS Spotlights */}
+      {activeTab === 'spotlights' && (
+        <div style={{marginBottom: '3rem'}}>
+          <div style={{marginBottom: '1.5rem', textAlign: 'center'}}>
+            <h2 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '0.5rem'}}>KDS Spotlights</h2>
+            <p style={{color: 'var(--color-text-muted)', fontSize: '1rem'}}>A curated set of our standout dance videos and performance highlights.</p>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem'}}>
+            {kdsSpotlights.map((v, idx) => (
+              <div key={idx} className="card" style={{display: 'flex', flexDirection: 'column', borderRadius: '1rem', overflow: 'hidden'}}>
+                <div style={{width: '100%', paddingBottom: '56.25%', position: 'relative', background: 'rgba(45, 27, 71, 0.4)', marginBottom: '1rem', overflow: 'hidden', borderRadius: '0.75rem'}}>
+                  <iframe
+                    src={v.videoUrl}
+                    title={v.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '0.75rem'}}
+                  />
+                </div>
+                <h3 style={{fontSize: '1.05rem', fontWeight: '700', marginBottom: '0.5rem', color: 'var(--color-accent)'}}>{v.title}</h3>
+                <p style={{fontSize: '0.9rem', color: 'var(--color-text-subtle)', marginBottom: '0.75rem', flex: 1}}>{v.description}</p>
+                <div style={{fontSize: '0.8rem', color: 'var(--color-text-muted)'}}>{v.name} • {v.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* YouTube Links */}
       {activeTab === 'youtube' && (
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem'}}>
@@ -327,7 +393,7 @@ export default function Testimonials(){
               rel="noopener noreferrer"
               style={{textDecoration: 'none'}}
             >
-              <div className="card dance-shadow-2" style={{
+              <div className="card" style={{
                 padding: '2rem',
                 borderRadius: '1rem',
                 cursor: 'pointer',
@@ -399,7 +465,7 @@ export default function Testimonials(){
               rel="noopener noreferrer"
               style={{textDecoration: 'none'}}
             >
-              <div className="card dance-shadow-3" style={{
+              <div className="card" style={{
                 padding: '1.5rem',
                 borderRadius: '1rem',
                 cursor: 'pointer',
@@ -474,7 +540,14 @@ export default function Testimonials(){
         <p style={{color: 'var(--color-text-muted)', marginBottom: '2rem', fontSize: '1.05rem'}}>
           Be part of a thriving community of dancers and create your own success story
         </p>
-        <button className="btn-primary" style={{fontSize: '1rem', fontWeight: '600'}}>
+        <button
+          className="btn-primary"
+          style={{fontSize: '1rem', fontWeight: '600'}}
+          onClick={() => {
+            const url = `https://wa.me/${WHATSAPP_CLEAN_NUMBER}?text=${WHATSAPP_DEFAULT_MESSAGE_ENCODED}`
+            try { window.open(url, '_blank', 'noopener') } catch (err) { console.warn('Could not open WhatsApp URL', err) }
+          }}
+        >
           Start Your Journey Today 🕺
         </button>
       </div>
