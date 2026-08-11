@@ -319,7 +319,7 @@ export default function Courses(){
 
             {selected.images && selected.images.length > 0 && (
               <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '0.75rem', marginBottom: '2rem'}}>
-                {selected.images.slice(0, 3).map((src, i) => (
+                {selected.images.map((src, i) => (
                   <img
                     key={i}
                     src={src}

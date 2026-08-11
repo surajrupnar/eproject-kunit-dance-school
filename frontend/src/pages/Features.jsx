@@ -142,9 +142,9 @@ export default function Features(){
         <h2 style={{fontSize: '1.75rem', fontWeight: '700', marginBottom: '2rem'}}>Our Track Record</h2>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem'}}>
           {[
-            { number: '500+', label: 'Happy Students' },
-            { number: '50+', label: 'Dance Shows' },
-            { number: '10+', label: 'Years Experience' },
+            { number: '5000+', label: 'Happy Students' },
+            { number: '250+', label: 'Dance Shows' },
+            { number: '20+', label: 'Years Experience' },
             { number: '100%', label: 'Student Satisfaction' }
           ].map((stat, idx) => (
             <div key={idx}>
