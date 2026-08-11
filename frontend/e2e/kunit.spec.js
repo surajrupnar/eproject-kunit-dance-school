@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-const WHATSAPP_NUMBER = '919665532331'
+const WHATSAPP_NUMBER = '919503043543'
 
 const advertisedCourses = [
   { name: 'Hip Hop' },

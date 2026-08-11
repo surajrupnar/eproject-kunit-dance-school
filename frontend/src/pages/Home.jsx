@@ -94,9 +94,9 @@ export default function Home(){
           </div>
 
           <div style={{display: 'grid', gap: '1.25rem'}}>
-            <h1 style={{fontSize: 'clamp(3rem, 7vw, 5.5rem)', lineHeight: 1.02, fontWeight: 900, letterSpacing: '-0.05em', margin: 0, color: '#ffffff', textTransform: 'uppercase'}}>
-              Dance <span style={{color: '#ff006e'}}>For</span> Your <span style={{color: '#ff006e'}}>Soul</span>
-            </h1>
+            <h4 style={{fontSize: 'clamp(3rem, 7vw, 5.5rem)', lineHeight: 1.02, fontWeight: 900, letterSpacing: '-0.05em', margin: 0, color: '#ffffff', textTransform: 'uppercase'}}>
+              WHERE <span style={{color: '#ff006e'}}>PASSION</span> FINDS <span style={{color: '#ff006e'}}>MOTION</span>
+            </h4>
 
             <div style={{maxWidth: '760px', display: 'grid', gap: '1rem'}}>
               <p style={{fontSize: '1.1rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.86)'}}>

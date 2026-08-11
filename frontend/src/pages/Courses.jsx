@@ -4,6 +4,9 @@ import { COURSES, DEFAULT_HIGHLIGHTS_TITLE } from '../config/courses'
 import foundationCourseImage from '../assets/cards/foundation-course.png'
 import technicalCourseImage from '../assets/cards/intermediate-course.png'
 import advancedCourseImage from '../assets/cards/advanced-course.png'
+import hipHopCourseImage from '../assets/cards/hip-hop-card-1.png'
+import bollywoodCourseImage from '../assets/cards/bollywoord-card-1.jpg'
+import contemporaryCourseImage from '../assets/cards/Contemporary-card-1.png'
 
 const CourseIllustration = ({ type }) => {
   const illustrations = {
@@ -175,7 +178,27 @@ export default function Courses(){
               background: 'linear-gradient(135deg, rgba(45, 27, 71, 0.4), rgba(26, 8, 48, 0.4))',
               border: '1px solid rgba(255, 0, 110, 0.1)'
             }}>
-              <CourseIllustration type={c.name} />
+              {c.name === 'Hip Hop' ? (
+                <img
+                  src={hipHopCourseImage}
+                  alt="Hip Hop dance class"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              ) : c.name === 'Bollywood' ? (
+                <img
+                  src={bollywoodCourseImage}
+                  alt="Bollywood dance class"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                />
+              ) : c.name === 'Contemporary' ? (
+                <img
+                  src={contemporaryCourseImage}
+                  alt="Contemporary dance class"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              ) : (
+                <CourseIllustration type={c.name} />
+              )}
             </div>
 
             {/* Course info */}

@@ -84,7 +84,7 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>📞</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Phone</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>+91 96655 32331</p>
+              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>+919503043543</p>
             </div>
 
             <div className="card" style={{padding: '1.5rem'}}>
@@ -96,7 +96,7 @@ export default function Contact(){
                 rel="noopener noreferrer"
                 style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)', textDecoration: 'none'}}
               >
-                info@kunitdance.com
+               karangaikwad3543@gmail.com
               </a>
             </div>
 
@@ -105,7 +105,7 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>🕒</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Hours</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>Mon - Sun: 4 PM - 9 PM</p>
+              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>Mon - Sun: 10 AM - 10 PM</p>
             </div>
           </div>
         </div>
