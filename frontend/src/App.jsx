@@ -70,7 +70,7 @@ export default function App(){
 
       <WhatsAppWidget phoneNumber={WHATSAPP_NUMBER} />
 
-      <footer style={{background: 'rgba(15, 3, 25, 0.8)', borderTop: '1px solid rgba(255, 0, 110, 0.1)', padding: '2rem', textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-subtle)', marginTop: '3rem'}}>
+      <footer style={{background: 'rgba(0, 0, 0, 0.8)', borderTop: '1px solid rgba(255, 214, 0, 0.12)', padding: '2rem', textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-subtle)', marginTop: '3rem'}}>
         <div>© K Unit Dance School • Professional Dance Training</div>
         <div style={{marginTop: '0.5rem', fontSize: '0.75rem'}}>Move. Shine. Perform.</div>
       </footer>

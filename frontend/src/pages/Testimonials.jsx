@@ -153,7 +153,7 @@ export default function Testimonials(){
       display: 'flex',
       gap: '1rem',
       marginBottom: '2rem',
-      borderBottom: '2px solid rgba(255, 0, 110, 0.1)',
+      borderBottom: '2px solid rgba(255, 214, 0, 0.1)',
       overflowX: 'auto',
       paddingBottom: '1rem'
     },
@@ -223,7 +223,7 @@ export default function Testimonials(){
                 marginBottom: '1.5rem',
                 flex: 1,
                 fontStyle: 'italic',
-                borderLeft: '3px solid rgba(255, 0, 110, 0.3)',
+                borderLeft: '3px solid rgba(255, 214, 0, 0.3)',
                 paddingLeft: '1rem'
               }}>
                 "{t.text}"
@@ -231,7 +231,7 @@ export default function Testimonials(){
 
               <div style={{
                 paddingTop: '1.5rem',
-                borderTop: '1px solid rgba(255, 0, 110, 0.1)',
+                borderTop: '1px solid rgba(255, 214, 0, 0.1)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem'
@@ -240,7 +240,7 @@ export default function Testimonials(){
                   width: '48px',
                   height: '48px',
                   borderRadius: '50%',
-                  background: `linear-gradient(135deg, ${idx % 3 === 0 ? '#ff006e' : idx % 3 === 1 ? '#8338ec' : '#3a86ff'}, ${idx % 3 === 0 ? '#ff7a9d' : idx % 3 === 1 ? '#b188ff' : '#7bb3ff'})`,
+                  background: 'linear-gradient(135deg, #ffd600, #fff7b2)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -286,7 +286,7 @@ export default function Testimonials(){
                 width: '100%',
                 paddingBottom: '56.25%',
                 position: 'relative',
-                background: 'rgba(45, 27, 71, 0.4)',
+                background: 'rgba(0, 0, 0, 0.35)',
                 marginBottom: '1rem',
                 overflow: 'hidden',
                 borderRadius: '0.75rem'
@@ -314,7 +314,7 @@ export default function Testimonials(){
                 fontSize: '1.125rem',
                 fontWeight: '700',
                 marginBottom: '0.5rem',
-                background: 'linear-gradient(90deg, #ff006e, #8338ec)',
+                background: 'linear-gradient(90deg, #ffd600, #fff7b2)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -333,7 +333,7 @@ export default function Testimonials(){
 
               <div style={{
                 paddingTop: '1rem',
-                borderTop: '1px solid rgba(255, 0, 110, 0.1)',
+                borderTop: '1px solid rgba(255, 214, 0, 0.1)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.75rem'
@@ -363,7 +363,7 @@ export default function Testimonials(){
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem'}}>
             {kdsSpotlights.map((v, idx) => (
               <div key={idx} className="card" style={{display: 'flex', flexDirection: 'column', borderRadius: '1rem', overflow: 'hidden'}}>
-                <div style={{width: '100%', paddingBottom: '56.25%', position: 'relative', background: 'rgba(45, 27, 71, 0.4)', marginBottom: '1rem', overflow: 'hidden', borderRadius: '0.75rem'}}>
+                <div style={{width: '100%', paddingBottom: '56.25%', position: 'relative', background: 'rgba(0, 0, 0, 0.35)', marginBottom: '1rem', overflow: 'hidden', borderRadius: '0.75rem'}}>
                   <iframe
                     src={v.videoUrl}
                     title={v.title}
@@ -436,7 +436,7 @@ export default function Testimonials(){
 
                 <div style={{
                   paddingTop: '1rem',
-                  borderTop: '1px solid rgba(255, 0, 110, 0.1)',
+                  borderTop: '1px solid rgba(255, 214, 0, 0.1)',
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
@@ -472,17 +472,17 @@ export default function Testimonials(){
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                background: 'linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(131, 56, 236, 0.05))',
-                border: '1px solid rgba(255, 0, 110, 0.15)',
+                background: 'linear-gradient(135deg, rgba(255, 214, 0, 0.05), rgba(255, 255, 255, 0.05))',
+                border: '1px solid rgba(255, 214, 0, 0.15)',
                 transition: 'all 200ms ease-out'
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.transform = 'translateY(-4px)'
-                e.currentTarget.style.borderColor = 'rgba(255, 0, 110, 0.3)'
+                e.currentTarget.style.borderColor = 'rgba(255, 214, 0, 0.3)'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.transform = 'translateY(0)'
-                e.currentTarget.style.borderColor = 'rgba(255, 0, 110, 0.15)'
+                e.currentTarget.style.borderColor = 'rgba(255, 214, 0, 0.15)'
               }}>
                 <div style={{
                   fontSize: '2.5rem',
@@ -505,7 +505,7 @@ export default function Testimonials(){
 
                 <div style={{
                   paddingTop: '1rem',
-                  borderTop: '1px solid rgba(255, 0, 110, 0.2)',
+                  borderTop: '1px solid rgba(255, 214, 0, 0.2)',
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
@@ -530,9 +530,9 @@ export default function Testimonials(){
 
       {/* CTA Section */}
       <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1))',
+        background: 'linear-gradient(135deg, rgba(255, 214, 0, 0.1), rgba(255, 255, 255, 0.04))',
         borderRadius: '1rem',
-        border: '1px solid rgba(255, 0, 110, 0.2)',
+        border: '1px solid rgba(255, 214, 0, 0.2)',
         padding: '3rem 2rem',
         textAlign: 'center'
       }}>

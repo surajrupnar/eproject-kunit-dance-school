@@ -119,14 +119,14 @@ export default function AdminPanel() {
                   width: '100%',
                   padding: '0.75rem 1rem',
                   borderRadius: '0.5rem',
-                  border: '2px solid rgba(255, 0, 110, 0.2)',
-                  background: 'rgba(45, 27, 71, 0.6)',
+                  border: '2px solid rgba(255, 214, 0, 0.2)',
+                  background: 'rgba(0, 0, 0, 0.55)',
                   color: 'var(--color-text)',
                   fontSize: '1rem',
                   transition: 'all 200ms ease-out'
                 }}
-                onFocus={e => e.target.style.borderColor = 'rgba(255, 0, 110, 0.5)'}
-                onBlur={e => e.target.style.borderColor = 'rgba(255, 0, 110, 0.2)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255, 214, 0, 0.5)'}
+                onBlur={e => e.target.style.borderColor = 'rgba(255, 214, 0, 0.2)'}
               />
             </div>
 
@@ -143,14 +143,14 @@ export default function AdminPanel() {
                   width: '100%',
                   padding: '0.75rem 1rem',
                   borderRadius: '0.5rem',
-                  border: '2px solid rgba(255, 0, 110, 0.2)',
-                  background: 'rgba(45, 27, 71, 0.6)',
+                  border: '2px solid rgba(255, 214, 0, 0.2)',
+                  background: 'rgba(0, 0, 0, 0.55)',
                   color: 'var(--color-text)',
                   fontSize: '1rem',
                   transition: 'all 200ms ease-out'
                 }}
-                onFocus={e => e.target.style.borderColor = 'rgba(255, 0, 110, 0.5)'}
-                onBlur={e => e.target.style.borderColor = 'rgba(255, 0, 110, 0.2)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255, 214, 0, 0.5)'}
+                onBlur={e => e.target.style.borderColor = 'rgba(255, 214, 0, 0.2)'}
               />
             </div>
 
@@ -163,7 +163,7 @@ export default function AdminPanel() {
             </button>
           </form>
 
-          <div style={{marginTop: '1.5rem', padding: '1rem', background: 'rgba(58, 134, 255, 0.1)', borderRadius: '0.5rem', fontSize: '0.75rem', color: 'var(--color-text-subtle)', textAlign: 'center'}}>
+          <div style={{marginTop: '1.5rem', padding: '1rem', background: 'rgba(255, 214, 0, 0.1)', borderRadius: '0.5rem', fontSize: '0.75rem', color: 'var(--color-text-subtle)', textAlign: 'center'}}>
             Demo credentials available in component config
           </div>
         </div>
@@ -218,7 +218,7 @@ export default function AdminPanel() {
                     style={{
                       fontSize: '1.5rem',
                       padding: '0.5rem 0.75rem',
-                      border: emoji === e ? '2px solid var(--color-accent)' : '2px solid rgba(255, 0, 110, 0.2)',
+                      border: emoji === e ? '2px solid var(--color-accent)' : '2px solid rgba(255, 214, 0, 0.2)',
                       background: 'transparent',
                       borderRadius: '0.5rem',
                       cursor: 'pointer',
@@ -244,14 +244,14 @@ export default function AdminPanel() {
                   width: '100%',
                   padding: '0.75rem 1rem',
                   borderRadius: '0.5rem',
-                  border: '2px solid rgba(255, 0, 110, 0.2)',
-                  background: 'rgba(45, 27, 71, 0.6)',
+                  border: '2px solid rgba(255, 214, 0, 0.2)',
+                  background: 'rgba(0, 0, 0, 0.55)',
                   color: 'var(--color-text)',
                   fontSize: '1rem',
                   transition: 'all 200ms ease-out'
                 }}
-                onFocus={e => e.target.style.borderColor = 'rgba(255, 0, 110, 0.5)'}
-                onBlur={e => e.target.style.borderColor = 'rgba(255, 0, 110, 0.2)'}
+                onFocus={e => e.target.style.borderColor = 'rgba(255, 214, 0, 0.5)'}
+                onBlur={e => e.target.style.borderColor = 'rgba(255, 214, 0, 0.2)'}
               />
             </div>
 
@@ -266,8 +266,8 @@ export default function AdminPanel() {
                   width: '100%',
                   padding: '0.75rem 1rem',
                   borderRadius: '0.5rem',
-                  border: '2px solid rgba(255, 0, 110, 0.2)',
-                  background: 'rgba(45, 27, 71, 0.6)',
+                  border: '2px solid rgba(255, 214, 0, 0.2)',
+                  background: 'rgba(0, 0, 0, 0.55)',
                   color: 'var(--color-text)',
                   fontSize: '1rem',
                   cursor: 'pointer'
@@ -312,11 +312,11 @@ export default function AdminPanel() {
             </h2>
             
             <div style={{
-              background: 'linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1))',
+              background: 'linear-gradient(135deg, rgba(255, 214, 0, 0.1), rgba(255, 255, 255, 0.05))',
               padding: '1.5rem',
               borderRadius: '0.75rem',
               marginBottom: '1rem',
-              border: '1px solid rgba(255, 0, 110, 0.2)'
+              border: '1px solid rgba(255, 214, 0, 0.2)'
             }}>
               <div style={{fontSize: '2rem', marginBottom: '0.75rem'}}>
                 {currentBroadcast.emoji}

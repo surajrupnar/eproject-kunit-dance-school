@@ -84,7 +84,7 @@ export default function Features(){
                 fontSize: '1.25rem',
                 fontWeight: '700',
                 marginBottom: '0.75rem',
-                background: idx % 3 === 0 ? 'linear-gradient(90deg, #ff006e, #ff7a9d)' : idx % 3 === 1 ? 'linear-gradient(90deg, #8338ec, #b188ff)' : 'linear-gradient(90deg, #3a86ff, #7bb3ff)',
+                background: 'linear-gradient(90deg, #ffd600, #fff7b2)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -120,7 +120,7 @@ export default function Features(){
                       width: '6px',
                       height: '6px',
                       borderRadius: '50%',
-                      background: idx % 3 === 0 ? '#ff006e' : idx % 3 === 1 ? '#8338ec' : '#3a86ff'
+                      background: '#ffd600'
                     }}/>
                     {detail}
                   </li>
@@ -133,9 +133,9 @@ export default function Features(){
 
       {/* Stats section */}
       <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 0, 110, 0.08), rgba(131, 56, 236, 0.08))',
+        background: 'linear-gradient(135deg, rgba(255, 214, 0, 0.08), rgba(255, 255, 255, 0.04))',
         borderRadius: '1rem',
-        border: '1px solid rgba(255, 0, 110, 0.1)',
+        border: '1px solid rgba(255, 214, 0, 0.1)',
         padding: '3rem 2rem',
         textAlign: 'center'
       }}>

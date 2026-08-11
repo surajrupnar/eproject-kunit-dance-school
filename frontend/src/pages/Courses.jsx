@@ -11,12 +11,12 @@ const CourseIllustration = ({ type }) => {
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
           <linearGradient id="hipHop" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#ff006e', stopOpacity: 0.2}} />
-            <stop offset="100%" style={{stopColor: '#ff006e', stopOpacity: 0.05}} />
+            <stop offset="0%" style={{stopColor: '#ffd600', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#fff7b2', stopOpacity: 0.05}} />
           </linearGradient>
         </defs>
         <rect width="160" height="160" fill="url(#hipHop)" rx="8"/>
-        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ff006e">🎤</text>
+        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ffd600">🎤</text>
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.6)">HIP HOP</text>
       </svg>
     ),
@@ -24,12 +24,12 @@ const CourseIllustration = ({ type }) => {
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
           <linearGradient id="contemp" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#8338ec', stopOpacity: 0.2}} />
-            <stop offset="100%" style={{stopColor: '#8338ec', stopOpacity: 0.05}} />
+            <stop offset="0%" style={{stopColor: '#ffd600', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#fff7b2', stopOpacity: 0.05}} />
           </linearGradient>
         </defs>
         <rect width="160" height="160" fill="url(#contemp)" rx="8"/>
-        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#8338ec">🎭</text>
+        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ffd600">🎭</text>
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.6)">CONTEMPORARY</text>
       </svg>
     ),
@@ -37,12 +37,12 @@ const CourseIllustration = ({ type }) => {
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
           <linearGradient id="bollywood" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#3a86ff', stopOpacity: 0.2}} />
-            <stop offset="100%" style={{stopColor: '#3a86ff', stopOpacity: 0.05}} />
+            <stop offset="0%" style={{stopColor: '#ffd600', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#fff7b2', stopOpacity: 0.05}} />
           </linearGradient>
         </defs>
         <rect width="160" height="160" fill="url(#bollywood)" rx="8"/>
-        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#3a86ff">💃</text>
+        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ffd600">💃</text>
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.6)">BOLLYWOOD</text>
       </svg>
     ),
@@ -51,12 +51,12 @@ const CourseIllustration = ({ type }) => {
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
           <linearGradient id="default" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: 'rgba(255, 0, 110, 0.2)'}} />
-            <stop offset="100%" style={{stopColor: 'rgba(131, 56, 236, 0.1)'}} />
+            <stop offset="0%" style={{stopColor: 'rgba(255, 214, 0, 0.2)'}} />
+            <stop offset="100%" style={{stopColor: 'rgba(255, 255, 255, 0.05)'}} />
           </linearGradient>
         </defs>
         <rect width="160" height="160" fill="url(#default)" rx="8"/>
-        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ff006e">✨</text>
+        <text x="80" y="90" fontSize="48" fontWeight="bold" textAnchor="middle" fill="#ffd600">✨</text>
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.6)">DANCE</text>
       </svg>
     )
@@ -83,12 +83,12 @@ const DiplomaIllustration = ({ title }) => {
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
           <linearGradient id="technical" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#3a86ff', stopOpacity: 0.2}} />
-            <stop offset="100%" style={{stopColor: '#8338ec', stopOpacity: 0.05}} />
+            <stop offset="0%" style={{stopColor: '#ffd600', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#fff7b2', stopOpacity: 0.05}} />
           </linearGradient>
         </defs>
         <rect width="160" height="160" fill="url(#technical)" rx="8"/>
-        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#3a86ff">🧠</text>
+        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#ffd600">🧠</text>
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.75)">TECHNIQUE</text>
       </svg>
     ),
@@ -96,12 +96,12 @@ const DiplomaIllustration = ({ title }) => {
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
         <defs>
           <linearGradient id="instructor" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#ff006e', stopOpacity: 0.2}} />
-            <stop offset="100%" style={{stopColor: '#8338ec', stopOpacity: 0.05}} />
+            <stop offset="0%" style={{stopColor: '#ffd600', stopOpacity: 0.2}} />
+            <stop offset="100%" style={{stopColor: '#fff7b2', stopOpacity: 0.05}} />
           </linearGradient>
         </defs>
         <rect width="160" height="160" fill="url(#instructor)" rx="8"/>
-        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#8338ec">📚</text>
+        <text x="80" y="80" fontSize="42" fontWeight="700" textAnchor="middle" fill="#ffd600">📚</text>
         <text x="80" y="130" fontSize="12" fontWeight="600" textAnchor="middle" fill="rgba(255,255,255,0.75)">TEACHING</text>
       </svg>
     ),
@@ -172,14 +172,14 @@ export default function Courses(){
               borderRadius: '0.75rem',
               marginBottom: '1.5rem',
               overflow: 'hidden',
-              background: 'linear-gradient(135deg, rgba(45, 27, 71, 0.4), rgba(26, 8, 48, 0.4))',
-              border: '1px solid rgba(255, 0, 110, 0.1)'
+              background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(15, 15, 15, 0.45))',
+              border: '1px solid rgba(255, 214, 0, 0.1)'
             }}>
               <CourseIllustration type={c.name} />
             </div>
 
             {/* Course info */}
-            <h3 style={{fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem', background: 'linear-gradient(90deg, #ff006e, #8338ec)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+            <h3 style={{fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem', background: 'linear-gradient(90deg, #ffd600, #fff7b2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               {c.name}
             </h3>
             
@@ -254,7 +254,7 @@ export default function Courses(){
         <a
           href="/brochure/K-Unit Dance School Brochure.pdf"
           download
-          style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginTop: '1.5rem', padding: '0.95rem 1.75rem', borderRadius: '999px', background: 'linear-gradient(135deg, #ff006e, #8338ec)', color: '#fff', fontWeight: 700, textDecoration: 'none', boxShadow: '0 18px 50px rgba(255, 0, 110, 0.18)'}}
+          style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginTop: '1.5rem', padding: '0.95rem 1.75rem', borderRadius: '999px', background: 'linear-gradient(135deg, #ffd600, #fff7b2)', color: '#000', fontWeight: 700, textDecoration: 'none', boxShadow: '0 18px 50px rgba(255, 214, 0, 0.18)'}}
         >
           Download Brochure
         </a>
@@ -264,9 +264,9 @@ export default function Courses(){
       <div style={{
         marginTop: '4rem',
         padding: '3rem 2rem',
-        background: 'linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1))',
+        background: 'linear-gradient(135deg, rgba(255, 214, 0, 0.1), rgba(255, 255, 255, 0.04))',
         borderRadius: '1rem',
-        border: '1px solid rgba(255, 0, 110, 0.2)',
+        border: '1px solid rgba(255, 214, 0, 0.2)',
         textAlign: 'center'
       }}>
         <h2 style={{fontSize: '1.75rem', fontWeight: '700', marginBottom: '1rem'}}>Can't find what you're looking for?</h2>

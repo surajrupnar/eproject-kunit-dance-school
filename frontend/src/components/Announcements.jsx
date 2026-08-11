@@ -17,8 +17,8 @@ export default function Announcements(){
 
   return (
     <div style={{
-      background: 'linear-gradient(90deg, rgba(255, 0, 110, 0.15) 0%, rgba(131, 56, 236, 0.15) 50%, rgba(58, 134, 255, 0.15) 100%)',
-      borderBottom: '1px solid rgba(255, 0, 110, 0.2)',
+      background: 'linear-gradient(90deg, rgba(255, 214, 0, 0.18) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 214, 0, 0.18) 100%)',
+      borderBottom: '1px solid rgba(255, 214, 0, 0.2)',
       padding: '1rem',
       backdropFilter: 'blur(8px)',
       position: 'sticky',
@@ -34,8 +34,8 @@ export default function Announcements(){
             width: '28px',
             height: '28px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #ff006e, #8338ec)',
-            color: 'white',
+            background: 'linear-gradient(135deg, #ffd600, #fff7b2)',
+            color: 'black',
             fontWeight: 'bold',
             fontSize: '0.875rem',
             animation: 'pulse-glow 2s ease-in-out infinite'
@@ -61,7 +61,7 @@ export default function Announcements(){
                 transition: 'all 200ms ease-out'
               }}
               onMouseEnter={e => {
-                e.target.style.background = 'rgba(255, 0, 110, 0.2)'
+                e.target.style.background = 'rgba(255, 214, 0, 0.2)'
               }}
               onMouseLeave={e => {
                 e.target.style.background = 'rgba(255, 255, 255, 0.1)'
@@ -77,7 +77,7 @@ export default function Announcements(){
             <div key={a.id} style={{
               paddingLeft: '2rem',
               paddingBottom: '0.75rem',
-              borderLeft: '2px solid rgba(255, 0, 110, 0.3)',
+              borderLeft: '2px solid rgba(255, 214, 0, 0.3)',
               animation: 'float-up 3s ease-in-out infinite'
             }}>
               <div style={{fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.5)'}}>

@@ -2,35 +2,11 @@ import React, { useState, useEffect } from 'react'
 
 const broadcastStyles = `
   @keyframes gradient-border-animate {
-    0% {
+    0%, 100% {
       background-position: 0% center;
-      filter: drop-shadow(0 0 8px rgba(255, 0, 110, 0.4))
-              drop-shadow(0 0 16px rgba(131, 56, 236, 0.3))
-              drop-shadow(0 0 24px rgba(58, 134, 255, 0.2));
-    }
-    25% {
-      background-position: 100% center;
-      filter: drop-shadow(0 0 12px rgba(131, 56, 236, 0.4))
-              drop-shadow(0 0 20px rgba(58, 134, 255, 0.3))
-              drop-shadow(0 0 28px rgba(255, 0, 110, 0.2));
     }
     50% {
-      background-position: 0% center;
-      filter: drop-shadow(0 0 16px rgba(58, 134, 255, 0.4))
-              drop-shadow(0 0 24px rgba(255, 0, 110, 0.3))
-              drop-shadow(0 0 32px rgba(131, 56, 236, 0.2));
-    }
-    75% {
-      background-position: -100% center;
-      filter: drop-shadow(0 0 12px rgba(255, 0, 110, 0.4))
-              drop-shadow(0 0 20px rgba(131, 56, 236, 0.3))
-              drop-shadow(0 0 28px rgba(58, 134, 255, 0.2));
-    }
-    100% {
-      background-position: 0% center;
-      filter: drop-shadow(0 0 8px rgba(255, 0, 110, 0.4))
-              drop-shadow(0 0 16px rgba(131, 56, 236, 0.3))
-              drop-shadow(0 0 24px rgba(58, 134, 255, 0.2));
+      background-position: 100% center;
     }
   }
 
@@ -54,16 +30,9 @@ const broadcastStyles = `
 
   .broadcast-container {
     padding: 1rem;
-    background: rgba(15, 3, 25, 0.6);
+    background: rgba(0, 0, 0, 0.72);
     backdrop-filter: blur(10px);
-    border: 2px solid;
-    border-image: linear-gradient(90deg, 
-      #ff006e 0%,
-      #8338ec 25%,
-      #3a86ff 50%,
-      #ff006e 75%,
-      #8338ec 100%
-    ) 1;
+    border: 2px solid rgba(255, 214, 0, 0.4);
     border-radius: 0.75rem;
     animation: gradient-border-animate 4s ease-in-out infinite;
     position: relative;
@@ -79,10 +48,9 @@ const broadcastStyles = `
     right: 0;
     bottom: 0;
     background: linear-gradient(90deg, 
-      rgba(255, 0, 110, 0.05),
-      rgba(131, 56, 236, 0.05),
-      rgba(58, 134, 255, 0.05),
-      rgba(255, 0, 110, 0.05)
+      rgba(255, 214, 0, 0.08),
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 214, 0, 0.08)
     );
     background-size: 200% 100%;
     animation: gradient-border-animate 4s ease-in-out infinite;
@@ -115,9 +83,9 @@ const broadcastStyles = `
   }
 
   .broadcast-close {
-    background: linear-gradient(135deg, #ff006e, #8338ec);
+    background: linear-gradient(135deg, #ffd600, #fff7b2);
     border: none;
-    color: white;
+    color: black;
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -132,7 +100,7 @@ const broadcastStyles = `
 
   .broadcast-close:hover {
     transform: scale(1.1) rotate(90deg);
-    box-shadow: 0 0 16px rgba(255, 0, 110, 0.4);
+    box-shadow: 0 0 16px rgba(255, 214, 0, 0.4);
   }
 
   @media (max-width: 640px) {
@@ -203,7 +171,7 @@ export default function BroadcastBanner() {
                 fontWeight: '700',
                 color: '#ffffff',
                 marginBottom: '0.25rem',
-                background: 'linear-gradient(90deg, #ff006e, #8338ec, #3a86ff)',
+                background: 'linear-gradient(90deg, #ffd600, #fff7b2, #ffffff)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'

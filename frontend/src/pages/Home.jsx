@@ -10,9 +10,9 @@ const HeroArtwork = () => (
   <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style={{width: '100%', height: '100%'}}>
     <defs>
       <linearGradient id="heroGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#ff006e" stopOpacity="0.65" />
-        <stop offset="45%" stopColor="#8338ec" stopOpacity="0.45" />
-        <stop offset="100%" stopColor="#3a86ff" stopOpacity="0.55" />
+        <stop offset="0%" stopColor="#ffd600" stopOpacity="0.65" />
+        <stop offset="45%" stopColor="#fff7b2" stopOpacity="0.45" />
+        <stop offset="100%" stopColor="#ffd600" stopOpacity="0.55" />
       </linearGradient>
       <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
         <feGaussianBlur stdDeviation="30" />
@@ -21,9 +21,9 @@ const HeroArtwork = () => (
 
     <rect width="1200" height="800" fill="rgba(10, 5, 20, 0.65)" />
 
-    <circle cx="260" cy="220" r="200" fill="rgba(255, 0, 110, 0.25)" filter="url(#blurGlow)" />
-    <circle cx="900" cy="180" r="170" fill="rgba(58, 134, 255, 0.2)" filter="url(#blurGlow)" />
-    <circle cx="720" cy="520" r="240" fill="rgba(131, 56, 236, 0.22)" filter="url(#blurGlow)" />
+    <circle cx="260" cy="220" r="200" fill="rgba(255, 214, 0, 0.25)" filter="url(#blurGlow)" />
+    <circle cx="900" cy="180" r="170" fill="rgba(255, 214, 0, 0.16)" filter="url(#blurGlow)" />
+    <circle cx="720" cy="520" r="240" fill="rgba(255, 214, 0, 0.18)" filter="url(#blurGlow)" />
 
     <path d="M 240 620 C 320 520 420 500 520 540 C 590 570 640 650 720 655 C 780 658 840 625 890 565"
       fill="none"
@@ -94,8 +94,8 @@ export default function Home(){
           </div>
 
           <div style={{display: 'grid', gap: '1.25rem'}}>
-            <h1 style={{fontSize: 'clamp(3rem, 7vw, 5.5rem)', lineHeight: 1.02, fontWeight: 900, letterSpacing: '-0.05em', margin: 0, color: '#ffffff', textTransform: 'uppercase'}}>
-              Dance <span style={{color: '#ff006e'}}>For</span> Your <span style={{color: '#ff006e'}}>Soul</span>
+            <h1 style={{fontSize: 'clamp(2.4rem, 5vw, 4rem)', lineHeight: 1.1, fontWeight: 900, letterSpacing: '-0.05em', margin: 0, color: '#ffffff', textTransform: 'uppercase'}}>
+              Where <span style={{color: '#ffd600'}}>Passion</span> Finds <span style={{color: '#ffd600'}}>Motion</span>
             </h1>
 
             <div style={{maxWidth: '760px', display: 'grid', gap: '1rem'}}>
@@ -129,7 +129,7 @@ export default function Home(){
               }}
               onMouseEnter={e => {
                 e.target.style.background = 'rgba(255, 255, 255, 0.08)'
-                e.target.style.borderColor = 'rgba(255, 0, 110, 0.35)'
+                e.target.style.borderColor = 'rgba(255, 214, 0, 0.35)'
               }}
               onMouseLeave={e => {
                 e.target.style.background = 'transparent'

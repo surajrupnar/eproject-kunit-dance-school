@@ -43,12 +43,12 @@ export default function Contact(){
     width: '100%',
     padding: '0.875rem 1rem',
     borderRadius: '0.5rem',
-    border: `2px solid ${focused === field ? 'rgba(255, 0, 110, 0.5)' : 'rgba(255, 0, 110, 0.1)'}`,
-    background: 'rgba(45, 27, 71, 0.6)',
+    border: `2px solid ${focused === field ? 'rgba(255, 214, 0, 0.5)' : 'rgba(255, 214, 0, 0.1)'}`,
+    background: 'rgba(0, 0, 0, 0.55)',
     color: 'var(--color-text)',
     fontSize: '1rem',
     transition: 'all 200ms ease-out',
-    boxShadow: focused === field ? '0 0 12px rgba(255, 0, 110, 0.2)' : 'none',
+    boxShadow: focused === field ? '0 0 12px rgba(255, 214, 0, 0.2)' : 'none',
     '::placeholder': {
       color: 'var(--color-text-subtle)'
     }
@@ -105,7 +105,7 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>🕒</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Hours</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>Mon - Sun: 4 PM - 9 PM</p>
+              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>Monday - Friday: 8 AM - 10 PM</p>
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Contact(){
         {/* Contact Form */}
         <div>
           <div className="card" style={{padding: '2rem', borderRadius: '1rem'}}>
-            <h2 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', background: 'linear-gradient(90deg, #ff006e, #8338ec)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+            <h2 style={{fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', background: 'linear-gradient(90deg, #ffd600, #fff7b2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               Send us a Message
             </h2>
 
