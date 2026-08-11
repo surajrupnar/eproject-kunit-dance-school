@@ -1,11 +1,11 @@
-import portfolio01 from '../assets/protfolio/portfolio-page-01.jpg'
-import portfolio02 from '../assets/protfolio/portfolio-page-02.jpg'
-import portfolio03 from '../assets/protfolio/portfolio-page-03.jpg'
-import portfolio04 from '../assets/protfolio/portfolio-page-04.jpg'
-import portfolio05 from '../assets/protfolio/portfolio-page-05.jpg'
-import portfolio06 from '../assets/protfolio/portfolio-page-06.jpg'
-import portfolio07 from '../assets/protfolio/portfolio-page-07.jpg'
-import portfolio08 from '../assets/protfolio/portfolio-page-08.jpg'
+import hiphop01 from '../assets/cards/hiphop/hiphop-1.png'
+import hiphop02 from '../assets/cards/hiphop/hiphop-2.jpg'
+import hiphop03 from '../assets/cards/hiphop/hiphop-3.jpg'
+import contemporary01 from '../assets/cards/contemporary/contemporary-1.jpg'
+import contemporary02 from '../assets/cards/contemporary/contemporary-2.jpg'
+import contemporary03 from '../assets/cards/contemporary/contemporary-3.jpg'
+import bollywood01 from '../assets/cards/bollywood/bollywood-1.jpg'
+import bollywood02 from '../assets/cards/bollywood/bollywood-2.jpg'
 
 export const DEFAULT_HIGHLIGHTS_TITLE = "What you'll learn"
 
@@ -20,7 +20,7 @@ export const COURSES = [
       '⁠Breaking (Breakdance)','Popping', 'Locking', 'House Dance','Krumping',
       'Waacking','⁠Voguing'
     ],
-    images: [portfolio01, portfolio02, portfolio03]
+    images: [hiphop01, hiphop02, hiphop03]
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ export const COURSES = [
       'Body awareness, control, and artistry',
       'Suitable for dancers at any level'
     ],
-    images: [portfolio04, portfolio05, portfolio06]
+    images: [contemporary01, contemporary02, contemporary03]
   },
   {
     id: 3,
@@ -48,6 +48,6 @@ export const COURSES = [
       'Full-fledged routines from Indian cinema',
       'Fun for all ages and levels'
     ],
-    images: [portfolio07, portfolio08, portfolio01]
+    images: [bollywood01, bollywood02]
   }
 ]

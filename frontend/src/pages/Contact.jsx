@@ -105,7 +105,7 @@ export default function Contact(){
             <div className="card" style={{padding: '1.5rem'}}>
               <div style={{fontSize: '1.75rem', marginBottom: '0.75rem'}}>🕒</div>
               <h3 style={{fontWeight: '700', marginBottom: '0.5rem'}}>Hours</h3>
-              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>Mon - Sun: 10 AM - 10 PM</p>
+              <p style={{fontSize: '0.95rem', color: 'var(--color-text-subtle)'}}>Mon - Fri: 9 AM - 10 PM</p>
             </div>
           </div>
         </div>
